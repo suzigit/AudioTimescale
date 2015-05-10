@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="902,962" id="timescale.system.metadata" metadata="uml2-1.0" initialized="true" tag="1000" key="32303035303932372073797374656D54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="MediaMetadata" location="40,200" size="180,157" id="timescale.system.metadata/MediaMetadata" runTimeClassModel="getIndexMetadata(),setIndexMetadata(I),getPES(),adjustClock(D),indexMetadata,MediaMetadata(Ltimescale.system.metadata.SystemPES;),toBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,18"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,108">
+      <children xsi:type="editmodel:MethodEditModel" name="MediaMetadata" id="timescale.system.metadata/MediaMetadata#MediaMetadata(Ltimescale.system.metadata.SystemPES;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPES" id="timescale.system.metadata/MediaMetadata#getPES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.system.metadata/MediaMetadata#toBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIndexMetadata" id="timescale.system.metadata/MediaMetadata#getIndexMetadata()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setIndexMetadata" id="timescale.system.metadata/MediaMetadata#setIndexMetadata(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="adjustClock" id="timescale.system.metadata/MediaMetadata#adjustClock(D)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.metadata/IMediaMetadata&lt;-timescale.system.metadata/MediaMetadata" source="//@children.0" target="//@children.5" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,117"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SystemHeader" location="38,590" size="184,85" id="timescale.system.metadata/SystemHeader" runTimeClassModel="SystemHeader([B[B),toBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="101,36">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemHeader" id="timescale.system.metadata/SystemHeader#SystemHeader([B[B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.system.metadata/SystemHeader#toBytes()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SystemPES" location="330,40" size="241,427" id="timescale.system.metadata/SystemPES" runTimeClassModel="getOriginalElementaryStreamLength(),getId(),streamIdentifier,toProcessedBytes(),addProcessedData([B),setId(I),isAudio(),getPack(),getStreamIdentifier(),id,isVideo(),SystemPES(B[B[B[B),toHeaderBytes(),getStrPTS(),getPts(),pack,toOriginalBytes(),data,getData(),adjustClock(D),setPack(Ltimescale.system.metadata.SystemPackHeader;),getSubsetData(I),setData([B),getPESLength()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="142,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="pack" id="timescale.system.metadata/SystemPES#pack"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="218,360">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemPES" id="timescale.system.metadata/SystemPES#SystemPES(B[B[B[B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="adjustClock" id="timescale.system.metadata/SystemPES#adjustClock(D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPts" id="timescale.system.metadata/SystemPES#getPts()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStrPTS" id="timescale.system.metadata/SystemPES#getStrPTS()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStreamIdentifier" id="timescale.system.metadata/SystemPES#getStreamIdentifier()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isAudio" id="timescale.system.metadata/SystemPES#isAudio()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isVideo" id="timescale.system.metadata/SystemPES#isVideo()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPack" id="timescale.system.metadata/SystemPES#getPack()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPack" id="timescale.system.metadata/SystemPES#setPack(Ltimescale.system.metadata.SystemPackHeader;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOriginalElementaryStreamLength" id="timescale.system.metadata/SystemPES#getOriginalElementaryStreamLength()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toHeaderBytes" id="timescale.system.metadata/SystemPES#toHeaderBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPESLength" id="timescale.system.metadata/SystemPES#getPESLength()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toOriginalBytes" id="timescale.system.metadata/SystemPES#toOriginalBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toProcessedBytes" id="timescale.system.metadata/SystemPES#toProcessedBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getData" id="timescale.system.metadata/SystemPES#getData()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSubsetData" id="timescale.system.metadata/SystemPES#getSubsetData(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addProcessedData" id="timescale.system.metadata/SystemPES#addProcessedData([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setData" id="timescale.system.metadata/SystemPES#setData([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="timescale.system.metadata/SystemPES#getId()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setId" id="timescale.system.metadata/SystemPES#setId(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SystemPackHeader" location="287,500" size="284,175" id="timescale.system.metadata/SystemPackHeader" runTimeClassModel="getScrExtension(),adjustClock(D),getStrSCR(),getScrBase(),toBytes(),SystemPackHeader([B[BLtimescale.system.metadata.SystemHeader;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="166,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="systemHeader" id="timescale.system.metadata/SystemPackHeader#systemHeader"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="124,108">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemPackHeader" id="timescale.system.metadata/SystemPackHeader#SystemPackHeader([B[BLtimescale.system.metadata.SystemHeader;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="adjustClock" id="timescale.system.metadata/SystemPackHeader#adjustClock(D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScrBase" id="timescale.system.metadata/SystemPackHeader#getScrBase()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScrExtension" id="timescale.system.metadata/SystemPackHeader#getScrExtension()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStrSCR" id="timescale.system.metadata/SystemPackHeader#getStrSCR()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.system.metadata/SystemPackHeader#toBytes()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CollectionPES" location="36,370" size="187,211" id="timescale.system.metadata/CollectionPES" runTimeClassModel="isValidIndex(I),isFinished(),add(Ltimescale.system.metadata.SystemPES;),streamIdentifier,CollectionPES(Ljava.lang.String;),elementAt(I),finish(),isFinished,getFirstElement(),getStreamIdentifier(),removeFirstPES()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="127,36"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="120,162">
+      <children xsi:type="editmodel:MethodEditModel" name="CollectionPES" id="timescale.system.metadata/CollectionPES#CollectionPES(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="add" id="timescale.system.metadata/CollectionPES#add(Ltimescale.system.metadata.SystemPES;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStreamIdentifier" id="timescale.system.metadata/CollectionPES#getStreamIdentifier()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finish" id="timescale.system.metadata/CollectionPES#finish()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isFinished" id="timescale.system.metadata/CollectionPES#isFinished()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="elementAt" id="timescale.system.metadata/CollectionPES#elementAt(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFirstElement" id="timescale.system.metadata/CollectionPES#getFirstElement()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeFirstPES" id="timescale.system.metadata/CollectionPES#removeFirstPES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidIndex" id="timescale.system.metadata/CollectionPES#isValidIndex(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.0" name="IMediaMetadata" location="40,40" size="273,117" stereotype="interface" id="timescale.metadata/IMediaMetadata">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,54">
+      <children xsi:type="editmodel:MethodEditModel" name="getIndexMetadata" id="timescale.metadata/IMediaMetadata#getIndexMetadata()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setIndexMetadata" id="timescale.metadata/IMediaMetadata#setIndexMetadata(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="adjustClock" id="timescale.metadata/IMediaMetadata#adjustClock(D)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

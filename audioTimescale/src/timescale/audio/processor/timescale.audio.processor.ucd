@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="918,801" id="timescale.audio.processor" metadata="uml2-1.0" initialized="true" tag="1000" key="323030353039323720617564696F54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="PADProcessor" location="320,230" size="286,67" id="timescale.audio.processor/PADProcessor" runTimeClassModel="adjustPAD(Ltimescale.audio.format.generalFormat.FramesCollection;Ltimescale.audio.processor.PADData;Ltimescale.data.ElementID;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="80,18">
+      <children xsi:type="editmodel:MethodEditModel" name="adjustPAD" id="timescale.audio.processor/PADProcessor#adjustPAD(Ltimescale.audio.format.generalFormat.FramesCollection;Ltimescale.audio.processor.PADData;Ltimescale.data.ElementID;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="PADData" location="444,303" size="162,121" id="timescale.audio.processor/PADData" runTimeClassModel="PADData(),setNumberOfBytes(I),getNumberOfBytes(),numberOfBytes">
+    <children xsi:type="editmodel:CompartmentEditModel" size="112,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="numberOfBytes" id="timescale.audio.processor/PADData#numberOfBytes"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="122,54">
+      <children xsi:type="editmodel:MethodEditModel" name="PADData" id="timescale.audio.processor/PADData#PADData()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberOfBytes" id="timescale.audio.processor/PADData#getNumberOfBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setNumberOfBytes" id="timescale.audio.processor/PADData#setNumberOfBytes(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="StreamProcessor" location="50,30" size="265,283" id="timescale.audio.processor/StreamProcessor" runTimeClassModel="finalizeProcessment(),addAnchorListener(Ltimescale.event.TimescaleInstantListener;),processFrame(Ltimescale.audio.format.generalFormat.FramesCollection;),getNextIDToProcess(),StreamProcessor(Ltimescale.data.ParametersProcessment;),setRate(Ltimescale.data.Factor;),calculateNextIdToProcess(Ltimescale.audio.format.generalFormat.FramesCollection;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="pad" id="timescale.audio.processor/StreamProcessor#pad"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="selector" id="timescale.audio.processor/StreamProcessor#selector"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frameProcessor" id="timescale.audio.processor/StreamProcessor#frameProcessor"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parameters" id="timescale.audio.processor/StreamProcessor#parameters"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="anchorsRetrieval" id="timescale.audio.processor/StreamProcessor#anchorsRetrieval"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nextIdToProcess" id="timescale.audio.processor/StreamProcessor#nextIdToProcess"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="242,126">
+      <children xsi:type="editmodel:MethodEditModel" name="StreamProcessor" id="timescale.audio.processor/StreamProcessor#StreamProcessor(Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAnchorListener" id="timescale.audio.processor/StreamProcessor#addAnchorListener(Ltimescale.event.TimescaleInstantListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="processFrame" id="timescale.audio.processor/StreamProcessor#processFrame(Ltimescale.audio.format.generalFormat.FramesCollection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="calculateNextIdToProcess" id="timescale.audio.processor/StreamProcessor#calculateNextIdToProcess(Ltimescale.audio.format.generalFormat.FramesCollection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNextIDToProcess" id="timescale.audio.processor/StreamProcessor#getNextIDToProcess()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finalizeProcessment" id="timescale.audio.processor/StreamProcessor#finalizeProcessment()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setRate" id="timescale.audio.processor/StreamProcessor#setRate(Ltimescale.data.Factor;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="FrameProcessor" location="50,321" size="347,103" id="timescale.audio.processor/FrameProcessor" runTimeClassModel="tryProcessFrame(Ltimescale.audio.format.generalFormat.FramesCollection;Ltimescale.audio.format.generalFormat.Frame;Ltimescale.audio.processor.PADData;),FrameProcessor(Ltimescale.data.Factor;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="75,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="rate" id="timescale.audio.processor/FrameProcessor#rate"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="113,36">
+      <children xsi:type="editmodel:MethodEditModel" name="FrameProcessor" id="timescale.audio.processor/FrameProcessor#FrameProcessor(Ltimescale.data.Factor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="tryProcessFrame" id="timescale.audio.processor/FrameProcessor#tryProcessFrame(Ltimescale.audio.format.generalFormat.FramesCollection;Ltimescale.audio.format.generalFormat.Frame;Ltimescale.audio.processor.PADData;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="FrameToProcessSelector" location="320,30" size="293,193" id="timescale.audio.processor/FrameToProcessSelector" runTimeClassModel="markProcessment(Ltimescale.audio.format.generalFormat.Frame;I),markWritten(),mustProcessFrame(Ltimescale.audio.format.generalFormat.Frame;),setRate(Ltimescale.data.Factor;),FrameToProcessSelector(Ltimescale.data.ParametersProcessment;),markRead()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="parameters" id="timescale.audio.processor/FrameToProcessSelector#parameters"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="rateReport" id="timescale.audio.processor/FrameToProcessSelector#rateReport"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="152,108">
+      <children xsi:type="editmodel:MethodEditModel" name="FrameToProcessSelector" id="timescale.audio.processor/FrameToProcessSelector#FrameToProcessSelector(Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="mustProcessFrame" id="timescale.audio.processor/FrameToProcessSelector#mustProcessFrame(Ltimescale.audio.format.generalFormat.Frame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="markProcessment" id="timescale.audio.processor/FrameToProcessSelector#markProcessment(Ltimescale.audio.format.generalFormat.Frame;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="markRead" id="timescale.audio.processor/FrameToProcessSelector#markRead()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="markWritten" id="timescale.audio.processor/FrameToProcessSelector#markWritten()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setRate" id="timescale.audio.processor/FrameToProcessSelector#setRate(Ltimescale.data.Factor;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

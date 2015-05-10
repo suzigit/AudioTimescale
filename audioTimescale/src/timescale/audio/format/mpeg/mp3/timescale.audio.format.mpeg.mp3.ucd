@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="721,389" id="timescale.audio.format.mpeg.mp3" metadata="uml2-1.0" initialized="true" tag="1000" key="323030353039323720617564696F54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="MP3BorrowBytesHandler" location="400,6" size="214,211" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler" runTimeClassModel="getNumberOfBorrowBytes(),invalidateBorrowBytes(),clone(),maxNumberOfBorrowedBytes(),MP3BorrowBytesHandler(Ltimescale.audio.format.mpeg.mp3.MP3SideInformation;),getSideInformation(),incrementNumberOfBorrowBytes(I),isValidBorrowBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="157,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="sideInfo" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#sideInfo"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="191,144">
+      <children xsi:type="editmodel:MethodEditModel" name="MP3BorrowBytesHandler" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#MP3BorrowBytesHandler(Ltimescale.audio.format.mpeg.mp3.MP3SideInformation;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberOfBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#getNumberOfBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="incrementNumberOfBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#incrementNumberOfBorrowBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="maxNumberOfBorrowedBytes" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#maxNumberOfBorrowedBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="invalidateBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#invalidateBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#isValidBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSideInformation" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#getSideInformation()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="timescale.audio.format.mpeg.mp3/MP3BorrowBytesHandler#clone()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MP3SideInformation" location="170,6" size="214,229" id="timescale.audio.format.mpeg.mp3/MP3SideInformation" runTimeClassModel="getNumberOfBorrowBytes(),invalidateBorrowBytes(),initNumberOfBorrowBytes(),toString(),maxNumberOfBorrowedBytes(),clone(),incrementNumberOfBorrowBytes(I),MP3SideInformation(Ljava.lang.String;ILtimescale.audio.util.constants.MP3Constants;),isValidBorrowBytes(),toBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="191,180">
+      <children xsi:type="editmodel:MethodEditModel" name="MP3SideInformation" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#MP3SideInformation(Ljava.lang.String;ILtimescale.audio.util.constants.MP3Constants;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#clone()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberOfBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#getNumberOfBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="incrementNumberOfBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#incrementNumberOfBorrowBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initNumberOfBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#initNumberOfBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="invalidateBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#invalidateBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidBorrowBytes" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#isValidBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="maxNumberOfBorrowedBytes" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#maxNumberOfBorrowedBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#toBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="timescale.audio.format.mpeg.mp3/MP3SideInformation#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MP3Header" location="40,6" size="115,121" id="timescale.audio.format.mpeg.mp3/MP3Header" runTimeClassModel="toString(),clone(),MP3Header(Ljava.lang.String;),toBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,72">
+      <children xsi:type="editmodel:MethodEditModel" name="MP3Header" id="timescale.audio.format.mpeg.mp3/MP3Header#MP3Header(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="timescale.audio.format.mpeg.mp3/MP3Header#clone()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.audio.format.mpeg.mp3/MP3Header#toBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="timescale.audio.format.mpeg.mp3/MP3Header#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

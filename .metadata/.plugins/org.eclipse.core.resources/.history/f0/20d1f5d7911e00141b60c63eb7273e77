@@ -1,0 +1,56 @@
+
+public class FindSubstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "456";
+		String t = "1235678910111213";
+		
+		
+	}
+
+	public FindSubstring () {
+		
+	}
+		
+	
+		
+
+	
+	class RoolingHash {
+
+		private String txt;
+		private double hashValue;
+		
+		public RoolingHash(String txt) {
+			this.txt=txt;
+			this.calculateHash();
+		}
+		
+		
+		
+		private void calculateHash() {
+			
+			this.hashValue = 			
+		}
+
+
+
+		public void append(char c) {
+			this.txt+=c;
+			calculateHash();
+		}
+		
+		public void pop(){
+			this.txt = this.txt.substring(1);
+		}
+		
+		public double rollingHash() {
+			return hashValue;
+		}
+	}	
+	
+}
+
+
+

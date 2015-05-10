@@ -1,0 +1,13 @@
+
+public class FindSubstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public int rolingHash () {
+		
+	}
+
+}

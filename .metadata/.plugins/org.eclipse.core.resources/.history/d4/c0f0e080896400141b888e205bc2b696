@@ -1,0 +1,24 @@
+package graph;
+
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class Graph {
+
+	private int nodes[];
+	//Bag b = new TreeBag();
+	
+	public Graph() {
+
+		List l<> = new LinkedList()<Integer>;
+
+		//this.nodes = new 
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+
+}

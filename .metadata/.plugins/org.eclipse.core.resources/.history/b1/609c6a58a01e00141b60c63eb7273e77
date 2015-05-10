@@ -1,0 +1,86 @@
+public class CircularList {
+
+	Node initialNode;
+	int lenght=0;
+	
+	//supondo txt com pelo menos 1 elemento
+	public CircularList(String txt) {
+		
+		//cria primeiro elemento
+		this.initialNode = new Node (txt.charAt(0));
+		this.initialNode.nextNode = this.initialNode;
+		this.initialNode.previousNode = this.initialNode;
+		this.lenght=1;
+		
+		//cria elementos seguintes
+		Node previousNode = this.initialNode;		
+		for (int i=0; i<txt.length(); i++) {
+			char c = txt.charAt(i);
+			Node node = new Node (c);
+			previousNode.nextNode = node;
+			node.previousNode = previousNode;
+			node.nextNode = this.initialNode;			
+			this.lenght++;
+		}
+		
+	}
+
+
+	protected void appendNode(char c) {
+		Node node = new Node (c);
+		node.nextNode = this.initialNode;
+		node.previousNode = this.initialNode.previousNode;
+		this.initialNode.previousNode.nextNode = node;
+		this.lenght++;
+	}
+	
+	//supondo ter pelo menos 1 elemento
+	protected void removeNode () {
+		//se tiver somente um elemento, torna initialNode = null;
+		if (this.initialNode.nextNode==this.initialNode) {
+			this.initialNode=null;
+		}
+		else {
+			//remove primeiro elemento
+			this.initialNode.previousNode = this.initialNode.nextNode;
+		}
+		this.lenght--;
+	}
+	
+	
+	
+	public String toString () {
+		String s = this.initialNode.c + "";
+		Node n = this.initialNode.nextNode;
+		
+		while (n!=this.initialNode) {
+			s += n.c;
+			n = n.nextNode;
+		}
+		
+		return s;
+	}
+	
+	
+	
+	class Node {		
+		
+		char c;
+		Node nextNode;
+		Node previousNode;
+		
+		protected Node (char c) {
+			this.c = c;
+			this.nextNode = null;
+			this.previousNode = null;
+		}		
+	}
+	
+	public static void main(String[] args) {
+		String s = "1";
+		CircularList cl = new CircularList(s);
+		System.out.println("txt = " + cl.toString());
+
+	}
+
+}

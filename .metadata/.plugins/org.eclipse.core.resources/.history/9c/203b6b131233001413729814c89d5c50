@@ -1,0 +1,61 @@
+package newtonmethod;
+
+public class KaratsubaMultiplication {
+
+	
+	//supondo n1 e n2 > 0
+	public static double multiply (long n1, long n2) {
+				
+		int numberOfDigits = getMaxNumberOfDigits(n1,n2);
+		long result = 0;
+		
+		if (numberOfDigits < 3) {
+			result  = n1*n2;
+		}
+		
+		else {
+			long denominator = (long) Math.pow(10, (numberOfDigits/2) );
+			
+			double n1MSB = (long) n1/denominator;
+			double n1LSB = n1%denominator;
+			
+			double n2MSB = (long) n2/denominator;
+			double n2LSB = n2%denominator;
+			
+			
+			double n1n2MSB = multiply (n1MSB, n2MSB);
+			double n1n2LSB = multiply (n1LSB, n2LSB);
+			
+			double firstPart = multiply ((n1MSB+n1LSB), (n2MSB+n2LSB));
+			
+			double n1n2Middle = firstPart - n1n2MSB - n1n2LSB;
+			
+			result = n1n2MSB*denominator*denominator + n1n2Middle*denominator + n1n2LSB;
+			
+		}
+		
+		return result;
+	}
+	
+	private static int getMaxNumberOfDigits(double n1, double n2) {
+		int length1 = (int)(Math.log10(n1)+1);
+		int length2 = (int)(Math.log10(n2)+1);
+		int result =  (length1>length2)?length1:length2;
+		return result;
+	}
+
+	public static void main(String[] args) {
+		long n1= 123456789;
+		long n2= 987654321;
+		n1*=10;
+		n2*=10;
+		
+		double result = multiply(n1, n2);
+		System.out.println("result karatsuba=" + result);
+		System.out.println("result normal   =" + (n1*n2));		
+//		System.out.println("Double max   =" + Double.MAX_VALUE);		
+//		System.out.println("Long max   =" + Long.MAX_VALUE);
+	
+	}
+
+}

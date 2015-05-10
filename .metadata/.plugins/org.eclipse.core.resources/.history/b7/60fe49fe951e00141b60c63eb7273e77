@@ -1,0 +1,75 @@
+
+public class FindSubstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "abc";
+		String txt = "fadfsfagabcfdfd";
+		
+		FindSubstring fs = new FindSubstring();
+		
+		System.out.println("indice=" + fs.findSubstring(s, txt));
+		
+	}
+
+	/*
+	 * Retorna o indice de inicio da substring no texto
+	 */
+	public int findSubstring (String s, String txt) {
+		FindSubstring.RollingHash rs = new RollingHash(s);
+		RollingHash rtxt = new RollingHash(txt.substring(0,s.length()));
+		
+		for (int i=0; i< (txt.length()-txt.length(); i++) {
+			if ()
+		}
+		return 0;
+	}
+		
+	
+		
+
+	
+	class RollingHash {
+
+		private String txt;
+		private int hashValue;
+		final int modNumber = 11;
+		
+		public RollingHash(String txt) {
+			this.txt=txt;
+			this.calculateHash();
+		}
+		
+		private void calculateHash() {			
+			int totalValue = 0;
+			for (int i=0; i<this.txt.length(); i++) {
+				char iChar = this.txt.charAt(i);
+				int numericValue = iChar;
+				System.out.println("char=" + iChar + " nv=" + numericValue);
+				totalValue += numericValue;
+			}
+			this.hashValue = totalValue % modNumber;
+			System.out.println("total=" + totalValue + " hash=" + hashValue);
+		}
+
+
+		public void append(char c) {
+			this.txt+=c;
+			this.hashValue = (this.hashValue+c)%modNumber;
+		}
+		
+		public void pop(){
+			char c = this.txt.charAt(0);
+			this.txt = this.txt.substring(1);
+			this.hashValue = (this.hashValue-c)%modNumber;
+		}
+		
+		public int rollingHash() {
+			return hashValue;
+		}
+	}	
+	
+}
+
+
+

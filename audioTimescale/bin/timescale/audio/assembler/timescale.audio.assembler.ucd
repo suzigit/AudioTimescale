@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="967,860" id="timescale.audio.assembler" metadata="uml2-1.0" initialized="true" zoom="0.95" scrolledY="-15" tag="1000" key="323030353039323720617564696F54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="AudioDisassembler" location="531,170" size="204,157" id="timescale.audio.assembler/AudioDisassembler" runTimeClassModel="getOutputTools(),output(Ltimescale.audio.format.generalFormat.Frame;),AudioDisassembler(Lutil.io.OutputTools;),finish(),outputTools,output([B)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="outputTools" id="timescale.audio.assembler/AudioDisassembler#outputTools"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="181,126">
+      <children xsi:type="editmodel:MethodEditModel" name="AudioDisassembler" id="timescale.audio.assembler/AudioDisassembler#AudioDisassembler(Lutil.io.OutputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.audio.assembler/AudioDisassembler#output(Ltimescale.audio.format.generalFormat.Frame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.audio.assembler/AudioDisassembler#output([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finish" id="timescale.audio.assembler/AudioDisassembler#finish()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOutputTools" id="timescale.audio.assembler/AudioDisassembler#getOutputTools()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.audio.assembler/IAudioDisassembler&lt;-timescale.audio.assembler/AudioDisassembler" source="//@children.0" target="//@children.5" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="94,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="95,135"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.7/@sourceConnections.0 //@children.8/@sourceConnections.0" name="MPEGBCAssembler" location="221,490" size="354,85" id="timescale.audio.format.mpeg/MPEGBCAssembler" runTimeClassModel="getStaticType(),MPEGBCAssembler(Lutil.io.InputTools;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="173,36">
+      <children xsi:type="editmodel:MethodEditModel" name="MPEGBCAssembler" id="timescale.audio.format.mpeg/MPEGBCAssembler#MPEGBCAssembler(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStaticType" id="timescale.audio.format.mpeg/MPEGBCAssembler#getStaticType()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.audio.assembler/GenericAudioAssembler&lt;-timescale.audio.format.mpeg/MPEGBCAssembler" source="//@children.1" target="//@children.3/@sourceConnections.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="177,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="-22,4"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AC3Assembler" location="440,399" size="309,85" id="timescale.audio.format.ac3/AC3Assembler" runTimeClassModel="getStaticType(),AC3Assembler(Lutil.io.InputTools;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,36">
+      <children xsi:type="editmodel:MethodEditModel" name="AC3Assembler" id="timescale.audio.format.ac3/AC3Assembler#AC3Assembler(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStaticType" id="timescale.audio.format.ac3/AC3Assembler#getStaticType()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.audio.assembler/GenericAudioAssembler&lt;-timescale.audio.format.ac3/AC3Assembler" source="//@children.2" target="//@children.3/@sourceConnections.0" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="154,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AACAssembler" location="9,360" size="352,85" id="timescale.audio.format.mpeg.aac/AACAssembler" runTimeClassModel="getStaticType(),AACAssembler(Lutil.io.InputTools;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,36">
+      <children xsi:type="editmodel:MethodEditModel" name="AACAssembler" id="timescale.audio.format.mpeg.aac/AACAssembler#AACAssembler(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStaticType" id="timescale.audio.format.mpeg.aac/AACAssembler#getStaticType()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.1/@sourceConnections.0" autoLocated="true" id="timescale.audio.assembler/GenericAudioAssembler&lt;-timescale.audio.format.mpeg.aac/AACAssembler" source="//@children.3" target="//@children.4" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="176,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,229" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0" name="GenericAudioAssembler" location="290,124" size="216,229" id="timescale.audio.assembler/GenericAudioAssembler" runTimeClassModel="getConstants(),extractTail(),getInitialBitsWithoutFrames(),constants,getType(),GenericAudioAssembler(Lutil.io.InputTools;),getInputTools(),createCompleteFrame(Lutil.io.InputTools;),createCompleteFrame(),inputTools">
+    <children xsi:type="editmodel:CompartmentEditModel" size="193,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="constants" id="timescale.audio.assembler/GenericAudioAssembler#constants"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="inputTools" id="timescale.audio.assembler/GenericAudioAssembler#inputTools"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="158,144">
+      <children xsi:type="editmodel:MethodEditModel" name="GenericAudioAssembler" id="timescale.audio.assembler/GenericAudioAssembler#GenericAudioAssembler(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createCompleteFrame" id="timescale.audio.assembler/GenericAudioAssembler#createCompleteFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createCompleteFrame" id="timescale.audio.assembler/GenericAudioAssembler#createCompleteFrame(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="extractTail" id="timescale.audio.assembler/GenericAudioAssembler#extractTail()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConstants" id="timescale.audio.assembler/GenericAudioAssembler#getConstants()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInitialBitsWithoutFrames" id="timescale.audio.assembler/GenericAudioAssembler#getInitialBitsWithoutFrames()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInputTools" id="timescale.audio.assembler/GenericAudioAssembler#getInputTools()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="timescale.audio.assembler/GenericAudioAssembler#getType()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.0" name="IAudioDisassembler" location="530,-10" size="190,135" stereotype="interface" id="timescale.audio.assembler/IAudioDisassembler" runTimeClassModel="getOutputTools(),output(Ltimescale.audio.format.generalFormat.Frame;),finish(),output([B)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="167,72">
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.audio.assembler/IAudioDisassembler#output(Ltimescale.audio.format.generalFormat.Frame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.audio.assembler/IAudioDisassembler#output([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finish" id="timescale.audio.assembler/IAudioDisassembler#finish()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOutputTools" id="timescale.audio.assembler/IAudioDisassembler#getOutputTools()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AudioAssembler" location="20,190" size="251,193" id="timescale.audio.assembler/AudioAssembler" runTimeClassModel="getInitialBitsWithoutFrames(),extractTail(),getConstants(),AudioAssembler(Ltimescale.audio.assembler.GenericAudioAssembler;),getType(),getInputTools(),createCompleteFrame()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="193,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="assembler" id="timescale.audio.assembler/AudioAssembler#assembler"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="228,126">
+      <children xsi:type="editmodel:MethodEditModel" name="AudioAssembler" id="timescale.audio.assembler/AudioAssembler#AudioAssembler(Ltimescale.audio.assembler.GenericAudioAssembler;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConstants" id="timescale.audio.assembler/AudioAssembler#getConstants()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createCompleteFrame" id="timescale.audio.assembler/AudioAssembler#createCompleteFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInitialBitsWithoutFrames" id="timescale.audio.assembler/AudioAssembler#getInitialBitsWithoutFrames()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="extractTail" id="timescale.audio.assembler/AudioAssembler#extractTail()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="timescale.audio.assembler/AudioAssembler#getType()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInputTools" id="timescale.audio.assembler/AudioAssembler#getInputTools()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="timescale.audio.assembler/IAudioAssembler&lt;-timescale.audio.assembler/AudioAssembler" source="//@children.6" target="//@children.9" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="87,-2" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="83,152"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MP3Assembler" location="393,629" size="356,67" id="timescale.audio.format.mpeg.mp3/MP3Assembler" runTimeClassModel="MP3Assembler(Lutil.io.InputTools;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="151,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MP3Assembler" id="timescale.audio.format.mpeg.mp3/MP3Assembler#MP3Assembler(Lutil.io.InputTools;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.audio.format.mpeg/MPEGBCAssembler&lt;-timescale.audio.format.mpeg.mp3/MP3Assembler" source="//@children.7" target="//@children.1" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="90,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="262,85"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MP2Assembler" location="20,629" size="356,67" id="timescale.audio.format.mpeg.mp2/MP2Assembler" runTimeClassModel="MP2Assembler(Lutil.io.InputTools;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="151,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MP2Assembler" id="timescale.audio.format.mpeg.mp2/MP2Assembler#MP2Assembler(Lutil.io.InputTools;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.audio.format.mpeg/MPEGBCAssembler&lt;-timescale.audio.format.mpeg.mp2/MP2Assembler" source="//@children.8" target="//@children.1" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="278,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,85"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.6/@sourceConnections.0" name="IAudioAssembler" location="24,-11" size="243,153" stereotype="interface" id="timescale.audio.assembler/IAudioAssembler">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="158,90">
+      <children xsi:type="editmodel:MethodEditModel" name="getInputTools" id="timescale.audio.assembler/IAudioAssembler#getInputTools()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createCompleteFrame" id="timescale.audio.assembler/IAudioAssembler#createCompleteFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConstants" id="timescale.audio.assembler/IAudioAssembler#getConstants()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInitialBitsWithoutFrames" id="timescale.audio.assembler/IAudioAssembler#getInitialBitsWithoutFrames()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="extractTail" id="timescale.audio.assembler/IAudioAssembler#extractTail()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

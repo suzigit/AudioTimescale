@@ -1,0 +1,211 @@
+
+public class AVLTree {
+
+	private Node rootNode;
+	
+	public enum Balance_Type { LEFT_CHILD_IS_HEAVIER, BALANCED, RIGHT_CHILD_IS_HEAVIER }; 
+		
+	
+	public static void main(String[] args) {
+		AVLTree tree = new AVLTree();
+		int numbers[] = {1,14,27,44,2,-6,110,24,122,90,131,0,123,16,31,84,51};
+		for (int i: numbers) {
+		
+			if(tree.canInsert(tree.rootNode, i, 10)) { 
+				Node n = tree.insertValue(i);
+				System.out.println("inseriu " + i);				
+				tree.rebalance(n);
+
+			}
+			else {
+				System.out.println("NAO inseriu " + i);								
+			}
+			
+			
+			
+		}
+		System.out.println("#### inseriu todos os valores ####");
+		
+		
+		System.out.println(tree.toString(tree.rootNode));
+	}
+
+	public Node insertValue(int valueToInsert) {
+		Node nodeToInsert = new Node (valueToInsert);
+		if (rootNode==null) {
+			rootNode = nodeToInsert;
+		}
+		//rootNode existe
+		else {
+			Node visitingNode = rootNode;
+			//percorre a árvore até achar um espaço para inserir
+			while (visitingNode!=null) {
+				if (valueToInsert<visitingNode.value) {
+					if (visitingNode.leftChild!=null) {
+						visitingNode = visitingNode.leftChild;
+					}
+					//encontrou um espaço para inserir
+					else {
+						visitingNode.leftChild = nodeToInsert;
+						nodeToInsert.parent = visitingNode;
+						recalculateHeight(nodeToInsert);
+						visitingNode = null;
+					}
+				}
+				else {
+					if (visitingNode.rightChild!=null) {
+						visitingNode = visitingNode.rightChild;
+					}
+					//encontrou um espaço para inserir
+					else {
+						visitingNode.rightChild = nodeToInsert;
+						nodeToInsert.parent = visitingNode;
+						recalculateHeight(nodeToInsert);
+						visitingNode = null;
+					}
+				}				
+			}
+			
+		}
+		return nodeToInsert;
+	}
+	
+	// imprime na ordem que a arvore estaria ordenada
+	public String toString (Node node) {
+		if (node!=null) {
+			toString (node.leftChild);
+			System.out.println(node.toString());
+			toString (node.rightChild);
+			
+		} 
+		return "";
+	}
+	
+	public boolean canInsert(Node node, int value, int delta) {
+		boolean result=true;
+		if (node!=null) {
+			result = result && canInsert(node.leftChild, value, delta);
+			if ((node.value<=value && node.value+delta>value ) 
+			|| (node.value>=value && node.value-delta<value ))
+			
+			{
+				result=false;
+			}
+			result = result && canInsert(node.rightChild, value, delta);
+		} 		
+		return result;
+	}
+	
+	private void rebalance(Node nodeToEvaluate) {
+		if (nodeToEvaluate!=null) {
+			Balance_Type balanceType = this.isBalanced(nodeToEvaluate); 
+			if(balanceType==Balance_Type.LEFT_CHILD_IS_HEAVIER) {
+				Node z = nodeToEvaluate;
+				Node y = nodeToEvaluate.leftChild;
+				
+				if (y.leftChild!=null && y.rightChild!=null) {
+				
+					if (y.leftChild.height>y.rightChild.height) {
+						//apenas uma rotacao para direita
+						Node x = y.leftChild;
+						rotateRight(x,y,z);
+					}
+					else if (y.leftChild.height<y.rightChild.height) {
+						//uma rotacao para esquerda e outra para a direita
+						Node x = y.rightChild;
+						rotateLeft(x.rightChild,y,z);
+						rotateRight(y,x,z);
+					}
+				}
+				else if (y.rightChild==null){
+						//apenas uma rotacao para direita
+						Node x = y.leftChild;
+						rotateRight(x,y,z);						
+				}
+				else { //y.leftChild==null
+					//uma rotacao para esquerda e outra para a direita
+					Node x = y.rightChild;
+					rotateLeft(x.rightChild,y,z);
+					rotateRight(y,x,z);					
+				}
+			}
+			else if (balanceType==Balance_Type.RIGHT_CHILD_IS_HEAVIER) {
+				//TODO
+			}
+		}
+	}
+	
+	//assumindo todos diferentes de null
+	private void rotateRight (Node x, Node y, Node z) {
+		y.parent = z.parent;
+		y.rightChild = z;
+		z.parent=y;
+		z.leftChild=y.rightChild;
+	}
+
+	//assumindo todos diferentes de null
+	private void rotateLeft (Node x, Node y, Node z) {
+		y.parent = z.parent;
+		y.leftChild = z;
+		z.parent=y;
+		z.rightChild=y.leftChild;
+	}
+	
+	
+	private Balance_Type isBalanced(Node n) {
+		Balance_Type result = Balance_Type.BALANCED;
+		if (n!=null) {
+			int heightLeftChild=-1;
+			int heightRightChild=-1;
+			if (n.leftChild!=null) {
+				heightLeftChild=n.leftChild.height;
+			}
+			if (n.rightChild!=null){
+				heightRightChild=n.rightChild.height;
+			}
+			int difHeights = heightLeftChild-heightRightChild;
+			if (difHeights>1) {
+				result=Balance_Type.LEFT_CHILD_IS_HEAVIER;
+			}
+			else if (difHeights<-1) {
+				result=Balance_Type.RIGHT_CHILD_IS_HEAVIER;				
+			}
+		}
+		return result;
+	}
+	
+	private void recalculateHeight(Node newNode) {
+		int newHeight=0; 
+		newNode.height=newHeight;
+		Node nodeParent = newNode.parent;
+		while (nodeParent!=null){
+			newHeight++;
+			if (newHeight> nodeParent.height) {
+				nodeParent.height++;				
+			}
+			nodeParent = nodeParent.parent; 
+		}
+		
+	}
+	
+}
+
+class Node {
+	int value;
+	int height;
+	Node leftChild;
+	Node rightChild;
+	Node parent;
+	
+	public Node (int v) {
+		this.value=v;
+		this.height=0;
+		this.leftChild=null;
+		this.rightChild=null;
+		this.parent=null;
+	}
+	
+	public String toString (){
+		return "value = " + value + " height=" +height;
+	}
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="721,988" id="util.io" metadata="uml2-1.0" initialized="true" zoom="0.9" tag="1000" key="3230303530393237206D6564696154696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0" name="FileInputTools" location="400,18" size="132,103" id="util.io/FileInputTools" runTimeClassModel="FileInputTools(Lutil.data.SharedBuffer;I),close(),run()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,54">
+      <children xsi:type="editmodel:MethodEditModel" name="FileInputTools" id="util.io/FileInputTools#FileInputTools(Lutil.data.SharedBuffer;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="util.io/FileInputTools#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="util.io/FileInputTools#run()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="util.io/CircularInputTools&lt;-util.io/FileInputTools" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,51" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="158,51"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="CircularInputTools" location="200,18" size="158,373" id="util.io/CircularInputTools" runTimeClassModel="tell(),read([BII),getBytes(I),lookBitsAhead(Ljava.lang.String;),reset(),read([BIIZ),close(),getBits(IZ),getTail(),read([BI),read([B),isEOF(),getType(),getInputName(),getBits(I),seek(J),CircularInputTools(Lutil.data.SharedBuffer;),nextStartCode(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="116,324">
+      <children xsi:type="editmodel:MethodEditModel" name="CircularInputTools" id="util.io/CircularInputTools#CircularInputTools(Lutil.data.SharedBuffer;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="util.io/CircularInputTools#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBits" id="util.io/CircularInputTools#getBits(IZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBits" id="util.io/CircularInputTools#getBits(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBytes" id="util.io/CircularInputTools#getBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInputName" location="23,124" id="util.io/CircularInputTools#getInputName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTail" id="util.io/CircularInputTools#getTail()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="util.io/CircularInputTools#getType()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isEOF" location="20,174" id="util.io/CircularInputTools#isEOF()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="lookBitsAhead" id="util.io/CircularInputTools#lookBitsAhead(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextStartCode" id="util.io/CircularInputTools#nextStartCode(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="read" id="util.io/CircularInputTools#read([BI)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="read" id="util.io/CircularInputTools#read([BII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="read" id="util.io/CircularInputTools#read([BIIZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="read" id="util.io/CircularInputTools#read([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="reset" id="util.io/CircularInputTools#reset()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="seek" id="util.io/CircularInputTools#seek(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="tell" id="util.io/CircularInputTools#tell()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="util.io/InputTools&lt;-util.io/CircularInputTools" source="//@children.1" target="//@children.3" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,110" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="122,115"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="RemoteFileInputTools" location="370,161" size="181,67" id="util.io/RemoteFileInputTools" runTimeClassModel="RemoteFileInputTools(Lutil.data.SharedBuffer;I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,18">
+      <children xsi:type="editmodel:MethodEditModel" name="RemoteFileInputTools" id="util.io/RemoteFileInputTools#RemoteFileInputTools(Lutil.data.SharedBuffer;I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="util.io/FileInputTools&lt;-util.io/RemoteFileInputTools" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="95,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,103"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@sourceConnections.0" name="InputTools" location="20,13" size="122,225" stereotype="interface" id="util.io/InputTools" runTimeClassModel="getType(),getBytes(I),lookBitsAhead(Ljava.lang.String;),getBits(I),reset(),getInputName(),close(),nextStartCode(Ljava.lang.String;),getTail()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="99,162">
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="util.io/InputTools#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBits" id="util.io/InputTools#getBits(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBytes" id="util.io/InputTools#getBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInputName" id="util.io/InputTools#getInputName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTail" id="util.io/InputTools#getTail()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="util.io/InputTools#getType()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="lookBitsAhead" id="util.io/InputTools#lookBitsAhead(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextStartCode" id="util.io/InputTools#nextStartCode(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="reset" id="util.io/InputTools#reset()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ContentType" location="560,18" size="178,355" id="util.data/ContentType">
+    <children xsi:type="editmodel:CompartmentEditModel" size="142,144">
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_AC3" id="util.data/ContentType#iD_AC3"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_MP2" id="util.data/ContentType#iD_MP2"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_MP3" id="util.data/ContentType#iD_MP3"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_MPEG2_VIDEO" id="util.data/ContentType#iD_MPEG2_VIDEO"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_MPEG_ADTS_AAC" id="util.data/ContentType#iD_MPEG_ADTS_AAC"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_MPEG_AUDIO_BC" id="util.data/ContentType#iD_MPEG_AUDIO_BC"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_MPEG_SYSTEM_A" id="util.data/ContentType#iD_MPEG_SYSTEM_A"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD_MPEG_SYSTEM_B" id="util.data/ContentType#iD_MPEG_SYSTEM_B"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="123,162">
+      <children xsi:type="editmodel:MethodEditModel" name="ContentType" id="util.data/ContentType#ContentType(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createByExtension" id="util.data/ContentType#createByExtension(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createByFullFormat" id="util.data/ContentType#createByFullFormat(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="util.data/ContentType#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFullFormat" id="util.data/ContentType#getFullFormat()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isAudio" id="util.data/ContentType#isAudio()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isMPEGBC" id="util.data/ContentType#isMPEGBC()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isSystem" id="util.data/ContentType#isSystem()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isVideo" id="util.data/ContentType#isVideo()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=7" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

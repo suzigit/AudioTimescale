@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="970,801" id="timescale.adapter" metadata="uml2-1.0" initialized="true" tag="1000" key="323030353039323720766964656F54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="VideoTimescaleAdapter" location="50,50" size="334,265" id="timescale.adapter/VideoTimescaleAdapter" runTimeClassModel="addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;),setFactor(Ltimescale.data.Factor;),stop(),config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;),isFinished(),getStreamID(),getDisassembler(),addInstantListener(Ltimescale.event.TimescaleInstantListener;),getReport(),setFinalInstant(D),run()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="171,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="videoController" id="timescale.adapter/VideoTimescaleAdapter#videoController"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="311,198">
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.adapter/VideoTimescaleAdapter#config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.adapter/VideoTimescaleAdapter#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFactor" id="timescale.adapter/VideoTimescaleAdapter#setFactor(Ltimescale.data.Factor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.adapter/VideoTimescaleAdapter#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleListener" id="timescale.adapter/VideoTimescaleAdapter#addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.adapter/VideoTimescaleAdapter#getDisassembler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReport" id="timescale.adapter/VideoTimescaleAdapter#getReport()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInstantListener" id="timescale.adapter/VideoTimescaleAdapter#addInstantListener(Ltimescale.event.TimescaleInstantListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStreamID" id="timescale.adapter/VideoTimescaleAdapter#getStreamID()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFinalInstant" id="timescale.adapter/VideoTimescaleAdapter#setFinalInstant(D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isFinished" id="timescale.adapter/VideoTimescaleAdapter#isFinished()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

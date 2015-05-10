@@ -1,0 +1,143 @@
+
+public class AVLTree {
+
+	private Node rootNode;
+	
+	public static void main(String[] args) {
+		AVLTree tree = new AVLTree();
+		int numbers[] = {1,14,27,44,2,-6,110,24,122,90,131,0,123,16,31,84,51};
+		for (int i: numbers) {
+		
+			if(tree.canInsert(tree.rootNode, i, 10)) { 
+				Node n = tree.insertValue(i);
+				System.out.println("inseriu " + i);				
+				tree.rebalance(n);
+
+			}
+			else {
+				System.out.println("NAO inseriu " + i);								
+			}
+			
+			
+			
+		}
+		System.out.println("#### inseriu todos os valores ####");
+		
+		
+		System.out.println(tree.toString(tree.rootNode));
+	}
+
+	public Node insertValue(int valueToInsert) {
+		Node nodeToInsert = new Node (valueToInsert);
+		if (rootNode==null) {
+			rootNode = nodeToInsert;
+		}
+		//rootNode existe
+		else {
+			Node visitingNode = rootNode;
+			//percorre a árvore até achar um espaço para inserir
+			while (visitingNode!=null) {
+				if (valueToInsert<visitingNode.value) {
+					if (visitingNode.leftChild!=null) {
+						visitingNode = visitingNode.leftChild;
+					}
+					//encontrou um espaço para inserir
+					else {
+						visitingNode.leftChild = nodeToInsert;
+						nodeToInsert.parent = visitingNode;
+						recalculateHeight(nodeToInsert);
+						visitingNode = null;
+					}
+				}
+				else {
+					if (visitingNode.rightChild!=null) {
+						visitingNode = visitingNode.rightChild;
+					}
+					//encontrou um espaço para inserir
+					else {
+						visitingNode.rightChild = nodeToInsert;
+						nodeToInsert.parent = visitingNode;
+						recalculateHeight(nodeToInsert);
+						visitingNode = null;
+					}
+				}				
+			}
+			
+		}
+		return nodeToInsert;
+	}
+	
+	// imprime na ordem que a arvore estaria ordenada
+	public String toString (Node node) {
+		if (node!=null) {
+			toString (node.leftChild);
+			System.out.println(node.toString());
+			toString (node.rightChild);
+			
+		} 
+		return "";
+	}
+	
+	public boolean canInsert(Node node, int value, int delta) {
+		boolean result=true;
+		if (node!=null) {
+			result = result && canInsert(node.leftChild, value, delta);
+			if ((node.value<=value && node.value+delta>value ) 
+			|| (node.value>=value && node.value-delta<value ))
+			
+			{
+				result=false;
+			}
+			result = result && canInsert(node.rightChild, value, delta);
+		} 		
+		return result;
+	}
+	
+	private void rebalance(Node nodeToEvaluate) {
+		
+		
+	}
+	
+	private boolean isBalanced(Node n) {
+		boolean result = true;
+		if (n!=null) {
+			
+		}
+		return result;
+	}
+	
+	private void recalculateHeight(Node newNode) {
+		int newHeight=0; 
+		newNode.height=newHeight;
+		Node nodeParent = newNode.parent;
+		while (nodeParent!=null){
+			newHeight++;
+			if (newHeight> nodeParent.height) {
+				nodeParent.height++;				
+			}
+			nodeParent = nodeParent.parent; 
+		}
+		
+	}
+	
+}
+
+class Node {
+	int value;
+	int height;
+	Node leftChild;
+	Node rightChild;
+	Node parent;
+	
+	public Node (int v) {
+		this.value=v;
+		this.height=0;
+		this.leftChild=null;
+		this.rightChild=null;
+		this.parent=null;
+	}
+	
+	public String toString (){
+		return "value = " + value + " height=" +height;
+	}
+}

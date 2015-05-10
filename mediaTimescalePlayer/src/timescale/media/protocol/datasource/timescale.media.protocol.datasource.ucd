@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="918,771" id="timescale.media.protocol.datasource" metadata="uml2-1.0" initialized="true" tag="1000" key="3230303530393237206D6564696154696D657363616C65506C617965722F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="MediaDataSource" location="60,40" size="285,265" id="timescale.media.protocol.datasource/MediaDataSource" runTimeClassModel="getDuration(),stop(),MediaDataSource(Lutil.io.InputTools;),getControl(Ljava.lang.String;),connect(),getControls(),start(),getStreams(),addTimescaleListener(Ltimescale.event.PresentationFinishListener;),getContentType(),disconnect(),contentType">
+    <children xsi:type="editmodel:CompartmentEditModel" size="155,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="stream" id="timescale.media.protocol.datasource/MediaDataSource#stream"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="262,198">
+      <children xsi:type="editmodel:MethodEditModel" name="MediaDataSource" id="timescale.media.protocol.datasource/MediaDataSource#MediaDataSource(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="connect" id="timescale.media.protocol.datasource/MediaDataSource#connect()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="disconnect" id="timescale.media.protocol.datasource/MediaDataSource#disconnect()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="start" id="timescale.media.protocol.datasource/MediaDataSource#start()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.media.protocol.datasource/MediaDataSource#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getContentType" id="timescale.media.protocol.datasource/MediaDataSource#getContentType()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStreams" id="timescale.media.protocol.datasource/MediaDataSource#getStreams()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDuration" id="timescale.media.protocol.datasource/MediaDataSource#getDuration()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getControl" id="timescale.media.protocol.datasource/MediaDataSource#getControl(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getControls" id="timescale.media.protocol.datasource/MediaDataSource#getControls()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleListener" id="timescale.media.protocol.datasource/MediaDataSource#addTimescaleListener(Ltimescale.event.PresentationFinishListener;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MediaSourceStream" location="270,40" size="248,265" id="timescale.media.protocol.datasource/MediaSourceStream" runTimeClassModel="tell(),read([BII),MediaSourceStream(Lutil.io.InputTools;Ljava.lang.String;),getControls(),close(),isRandomAccess(),endOfStream(),contentDescriptor,willReadBlock(),getControl(Ljava.lang.String;),getContentDescriptor(),getContentLength(),seek(J)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,18"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="225,216">
+      <children xsi:type="editmodel:MethodEditModel" name="MediaSourceStream" id="timescale.media.protocol.datasource/MediaSourceStream#MediaSourceStream(Lutil.io.InputTools;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="read" id="timescale.media.protocol.datasource/MediaSourceStream#read([BII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="willReadBlock" id="timescale.media.protocol.datasource/MediaSourceStream#willReadBlock()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getContentDescriptor" id="timescale.media.protocol.datasource/MediaSourceStream#getContentDescriptor()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="timescale.media.protocol.datasource/MediaSourceStream#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="endOfStream" id="timescale.media.protocol.datasource/MediaSourceStream#endOfStream()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getContentLength" id="timescale.media.protocol.datasource/MediaSourceStream#getContentLength()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getControl" id="timescale.media.protocol.datasource/MediaSourceStream#getControl(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getControls" id="timescale.media.protocol.datasource/MediaSourceStream#getControls()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isRandomAccess" id="timescale.media.protocol.datasource/MediaSourceStream#isRandomAccess()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="tell" id="timescale.media.protocol.datasource/MediaSourceStream#tell()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="seek" id="timescale.media.protocol.datasource/MediaSourceStream#seek(J)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

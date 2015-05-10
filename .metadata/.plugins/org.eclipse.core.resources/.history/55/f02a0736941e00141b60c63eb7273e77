@@ -1,0 +1,75 @@
+
+public class FindSubstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "abc";
+		String txt = "fadfsfagabcfdfd";
+		
+		FindSubstring fs = new FindSubstring();
+		
+		System.out.println("indice=" + fs.findSubstring(s, txt));
+		
+	}
+
+	/*
+	 * Retorna o indice de inicio da substring no texto
+	 */
+	public int findSubstring (String s, String txt) {
+		FindSubstring.RollingHash rs = new RollingHash(s);
+//		RollingHash rtxt = new RollingHash(txt);
+		
+		return 0;
+	}
+		
+	
+		
+
+	
+	class RollingHash {
+
+		private String txt;
+		private int hashValue;
+		
+		public RollingHash(String txt) {
+			this.txt=txt;
+			this.calculateHash();
+		}
+		
+		
+		
+		private void calculateHash() {			
+			int totalValue = 0;
+			for (int i=0; i<this.txt.length(); i++) {
+				char iChar = this.txt.charAt(i);
+				int numericValue = iChar;
+				System.out.println("char=" + iChar + " nv=" + numericValue);
+				totalValue += numericValue;
+			}
+			this.hashValue = totalValue % 10;
+			System.out.println("total=" + totalValue + " hash=" + hashValue);
+
+		}
+
+
+
+		public void append(char c) {
+//TODO
+			this.txt+=c;
+			calculateHash();
+		}
+		
+		public void pop(){
+//TODO
+			this.txt = this.txt.substring(1);
+		}
+		
+		public double rollingHash() {
+			return hashValue;
+		}
+	}	
+	
+}
+
+
+

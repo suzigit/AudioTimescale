@@ -1,0 +1,114 @@
+package graph;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class GraphSearch {
+
+	private Graph graph;
+	private boolean marked[];
+	private int arriveBy[];
+	private int connectedSet[];
+	private int numberOfConnectedSet = 0;
+	private int distanceOfInitialNode[];
+	
+	
+	private enum SearchType { DFS, BFS };
+	
+	public GraphSearch(Graph g) {
+		this.graph = g;
+		this.marked = new boolean[g.getV()];
+		for(int i=0; i<g.getV(); i++) {
+			this.marked[i]=false;
+		}
+		this.arriveBy = new int[g.getV()];
+		this.connectedSet = new int [g.getV()];
+		this.distanceOfInitialNode = new int [g.getV()];
+
+	}
+	
+	private void visitAllNodes(SearchType type) {
+		for (int i=0; i<this.graph.getV(); i++) {
+			if (this.marked[i]==false) {
+				this.numberOfConnectedSet++;				
+				this.arriveBy[i] = i;
+				this.distanceOfInitialNode[i]=0;
+				
+				if (type == SearchType.DFS) {
+					visitConnectedSetByDfs(i);									
+				}
+				else {
+					visitConnectedSetByBfs(i);														
+				}
+			}
+		}
+	}
+
+	
+	private void visitConnectedSetByBfs(int vIndex) {
+
+		List<Integer> vertexToProcess = new LinkedList<Integer>();
+
+		
+		//****  VISITA *************
+		this.marked[vIndex] = true;
+		this.connectedSet[vIndex] = this.numberOfConnectedSet;
+
+		System.out.println("visiting " + vIndex + " no set=" + this.connectedSet[vIndex] + " by vertex " + this.arriveBy[vIndex]
+				+ ", distance of root vertex=" + this.distanceOfInitialNode[vIndex]);		
+				
+		//coloca adj que nao processou na na lista
+		Iterator<Integer> iterator = this.graph.getAdj(vIndex);
+		while (iterator.hasNext()) {
+			int v2Index = iterator.next();
+			
+			
+			//ainda não visitou esse vertice
+			if (this.marked[v2Index]==false) {
+
+			}			
+		}
+		
+
+		// Pega proximo elemento da lista e faz recursao
+		this.arriveBy[v2Index] = vIndex;
+		this.distanceOfInitialNode[v2Index] = this.distanceOfInitialNode[vIndex]+1;
+		
+	
+	}
+	
+	private void visitConnectedSetByDfs(int vIndex) {
+		
+		//****  VISITA *************
+		this.marked[vIndex] = true;
+		this.connectedSet[vIndex] = this.numberOfConnectedSet;
+
+		System.out.println("visiting " + vIndex + " no set=" + this.connectedSet[vIndex] + " by vertex " + this.arriveBy[vIndex]
+				+ ", distance of root vertex=" + this.distanceOfInitialNode[vIndex]);		
+		
+		
+		//Processamento dos próximos vértices
+		Iterator<Integer> iterator = this.graph.getAdj(vIndex);
+		while (iterator.hasNext()) {
+			int v2Index = iterator.next();
+			
+			//ainda não visitou esse vertice
+			if (this.marked[v2Index]==false) {
+				this.arriveBy[v2Index] = vIndex;
+				this.distanceOfInitialNode[v2Index] = this.distanceOfInitialNode[vIndex]+1;
+				visitConnectedSetByDfs(v2Index);
+			}			
+		}
+	}
+	
+	
+	
+	public static void main(String args[]) {
+		GraphSearch dfs = new GraphSearch(new Graph("graph.txt"));
+		dfs.visitAllNodes(SearchType.DFS);
+		
+		
+	}
+
+}

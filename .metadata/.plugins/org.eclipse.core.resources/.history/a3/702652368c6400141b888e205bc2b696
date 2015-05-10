@@ -1,0 +1,31 @@
+package graph;
+
+import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class Graph {
+
+	//Bag b = new TreeBag();
+	//List<Integer> l = new LinkedList<Integer>();
+	private List<Integer>[] graph;
+
+	
+	public Graph(int v, String graphDataInput) {
+
+		this.graph = (List<Integer>[]) new List[v];
+		for(int i=0; i< v; i++) {
+			this.graph[i] = new LinkedList<Integer>();
+		}
+
+		File f = new File(graphDataInput);
+		InputStream ();
+	
+	}
+	
+	
+	
+	
+
+}

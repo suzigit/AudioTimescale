@@ -1,0 +1,94 @@
+/*
+ * Essa classe faz parte do projeto de ajuste elastico de audio comprimido
+ * do formatador Hyperprop.
+ * Todos os direitos sao reservados.
+ * 
+ * @Copyright: Laboratorio TeleMidia
+ * @author: <a href="mailto:smbm@telemidia.puc-rio.br">Suzana Mesquita</a>
+ * Creation date: (21/07/2004)
+ */
+ 
+package timescale.frontendgui;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import timescale.backendgui.GUIController;
+
+
+/**
+ * Essa classe exibe o menu e ativa as operacoes selecionadas pelo usuario.
+ */
+public class MenuBarAudio extends MenuBar {
+	
+	private static final long serialVersionUID = 1L;
+	
+	private TimescaleAudioFrame frameParent;
+	private Menu fileMenu = new Menu();
+	private MenuItem exitMenuItem = new MenuItem();	
+	private Menu reportMenu = new Menu();
+	private MenuItem framesMenuItem = new MenuItem();
+	private MenuItem timeMenuItem = new MenuItem();	
+	private Menu helpMenu = new Menu();
+	private MenuItem indexHelpMenuItem = new MenuItem();
+	private MenuItem aboutHelpMenuItem = new MenuItem();
+	private GUIController controller;
+
+	
+	/** 
+	 * Controi instancia da classe.
+	 * @param f janela de exibicao do menu
+	 * @param controller controlador que oferece realizacao de servicos
+	 */	
+	public MenuBarAudio (TimescaleAudioFrame f, GUIController controller) {
+		
+		this.frameParent = f;
+		this.controller = controller;
+		this.setFont(new Font("verdana", Font.BOLD, 11));
+		
+		this.fileMenu.setLabel("Arquivo");
+		this.exitMenuItem.setLabel("Sair");				
+	
+		
+		this.exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
+		  	public void actionPerformed(ActionEvent e) {
+				exit_actionPerformed(e);
+		  	}
+		});
+		
+		this.fileMenu.add(exitMenuItem);	
+		this.add(fileMenu);
+
+		this.reportMenu.setLabel("Relatórios");
+		this.framesMenuItem.setLabel("Em frames...");
+		this.framesMenuItem.addActionListener (new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				framesReportMenuItem_actionPerformed(e);
+			}
+		});		
+		this.reportMenu.add(framesMenuItem);
+
+
+		this.timeMenuItem.setLabel("Em tempo...");		
+		this.reportMenu.add(timeMenuItem);		
+		this.add(reportMenu);
+
+/*
+		this.helpMenu.setLabel("Ajuda");
+		this.indexHelpMenuItem.setLabel("Índice...");
+		this.aboutHelpMenuItem.setLabel("Sobre...");		
+		this.helpMenu.add(this.indexHelpMenuItem);
+		this.helpMenu.add(this.aboutHelpMenuItem);
+		this.add(helpMenu);
+*/						 			
+	}
+	
+	private void framesReportMenuItem_actionPerformed(ActionEvent e) {
+		ReportInFramesDialog fd = new ReportInFramesDialog(frameParent, controller);
+		fd.setVisible(true);	
+	}
+	
+	private void exit_actionPerformed(ActionEvent e) {
+		this.frameParent.dispose();	
+	}
+}

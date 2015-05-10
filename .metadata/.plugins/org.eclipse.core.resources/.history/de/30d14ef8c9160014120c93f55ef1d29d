@@ -1,0 +1,93 @@
+
+public class AVLTree {
+
+	private Node rootNode;
+	
+	public static void main(String[] args) {
+		AVLTree tree = new AVLTree();
+		int numbers[] = {1,4,7,4,2,-6,10,2,12,9,11,0,13,6,3,8,5};
+		for (int i: numbers) {
+			tree.insertValue(i);
+		}
+		System.out.println("inseriu");
+
+		System.out.println(tree.toString(tree.rootNode, ""));
+	}
+
+	public void insertValue(int valueToInsert) {
+		Node nodeToInsert = new Node (valueToInsert);
+		if (rootNode==null) {
+			rootNode = nodeToInsert;
+		}
+		//rootNode existe
+		else {
+			Node visitingNode = rootNode;
+			//percorre a árvore até achar um espaço para inserir
+			while (visitingNode!=null) {
+				if (valueToInsert<visitingNode.value) {
+					if (visitingNode.leftChild!=null) {
+						visitingNode = visitingNode.leftChild;
+					}
+					//encontrou um espaço para inserir
+					else {
+						visitingNode.leftChild = nodeToInsert;
+						nodeToInsert.parent = visitingNode;
+						visitingNode = null;
+					}
+				}
+				else {
+					if (visitingNode.rightChild!=null) {
+						visitingNode = visitingNode.rightChild;
+					}
+					//encontrou um espaço para inserir
+					else {
+						visitingNode.rightChild = nodeToInsert;
+						nodeToInsert.parent = visitingNode;						
+						visitingNode = null;
+					}
+				}				
+			}
+			
+		}
+	}
+	
+	// imprime na ordem que a arvore estaria ordenada
+	public String toString (Node node, String txt) {
+		if (node!=null) {
+//			txt += node.toString() + "\n";
+			toString (node.leftChild, txt);
+			System.out.println(node.toString());
+			toString (node.rightChild, txt);
+			
+		} 
+		else {
+//			System.out.println("(null)");
+//			txt += "(null)\n";
+		} 				
+		return txt;
+	}
+	
+}
+
+class Node {
+	int value;
+	int height;
+	Node leftChild;
+	Node rightChild;
+	Node parent;
+	
+	public Node (int v) {
+		this.value=v;
+		this.height=0;
+		this.leftChild=null;
+		this.rightChild=null;
+		this.parent=null;
+	}
+	
+	public String toString (){
+		return "value = " + value + " height=" +height;
+	}
+	
+	
+	
+}

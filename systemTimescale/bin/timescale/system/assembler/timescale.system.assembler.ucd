@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="918,771" id="timescale.system.assembler" metadata="uml2-1.0" initialized="true" tag="1000" key="32303035303932372073797374656D54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="SystemAssembler" location="50,50" size="240,247" id="timescale.system.assembler/SystemAssembler">
+    <children xsi:type="editmodel:CompartmentEditModel" size="123,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="inputTools" id="timescale.system.assembler/SystemAssembler#inputTools"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,180">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemAssembler" id="timescale.system.assembler/SystemAssembler#SystemAssembler(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="timescale.system.assembler/SystemAssembler#getType()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hasMorePacks" id="timescale.system.assembler/SystemAssembler#hasMorePacks()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPack" id="timescale.system.assembler/SystemAssembler#getPack()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hasMorePES" id="timescale.system.assembler/SystemAssembler#hasMorePES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPES" id="timescale.system.assembler/SystemAssembler#getPES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isEndOfStream" id="timescale.system.assembler/SystemAssembler#isEndOfStream()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finish" id="timescale.system.assembler/SystemAssembler#finish()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPack" id="timescale.system.assembler/SystemAssembler#getPack(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPES" id="timescale.system.assembler/SystemAssembler#getPES(Lutil.io.InputTools;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SystemDisassembler" location="310,50" size="212,157" id="timescale.system.assembler/SystemDisassembler">
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="outputTools" id="timescale.system.assembler/SystemDisassembler#outputTools"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,90">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemDisassembler" id="timescale.system.assembler/SystemDisassembler#SystemDisassembler(Lutil.io.OutputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOutputTools" id="timescale.system.assembler/SystemDisassembler#getOutputTools()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.system.assembler/SystemDisassembler#output([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.system.assembler/SystemDisassembler#output([BI)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finish" id="timescale.system.assembler/SystemDisassembler#finish()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="918,801" id="timescale.system.elementaryStreams" metadata="uml2-1.0" initialized="true" scrolledY="35" tag="1000" key="32303035303932372073797374656D54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="AudioESAssembler" location="259,41" size="335,175" id="timescale.system.elementaryStreams/AudioESAssembler" runTimeClassModel="extractTail(),getInitialBitsWithoutFrames(),getConstants(),AudioESAssembler(Ltimescale.system.metadata.CollectionPES;Ltimescale.audio.assembler.GenericAudioAssembler;),getType(),getInputTools(),createCompleteFrame()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="312,126">
+      <children xsi:type="editmodel:MethodEditModel" name="createCompleteFrame" id="timescale.system.elementaryStreams/AudioESAssembler#createCompleteFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInitialBitsWithoutFrames" id="timescale.system.elementaryStreams/AudioESAssembler#getInitialBitsWithoutFrames()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="extractTail" id="timescale.system.elementaryStreams/AudioESAssembler#extractTail()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConstants" id="timescale.system.elementaryStreams/AudioESAssembler#getConstants()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInputTools" id="timescale.system.elementaryStreams/AudioESAssembler#getInputTools()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="timescale.system.elementaryStreams/AudioESAssembler#getType()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="AudioESAssembler" id="timescale.system.elementaryStreams/AudioESAssembler#AudioESAssembler(Ltimescale.system.metadata.CollectionPES;Ltimescale.audio.assembler.GenericAudioAssembler;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AudioESDisassembler" location="370,240" size="224,157" id="timescale.system.elementaryStreams/AudioESDisassembler" runTimeClassModel="getOutputTools(),output(Ltimescale.audio.format.generalFormat.Frame;),AudioESDisassembler(Ltimescale.system.metadata.CollectionPES;),finish(),getCollectionPES(),output([B)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="201,108">
+      <children xsi:type="editmodel:MethodEditModel" name="getCollectionPES" id="timescale.system.elementaryStreams/AudioESDisassembler#getCollectionPES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.system.elementaryStreams/AudioESDisassembler#output(Ltimescale.audio.format.generalFormat.Frame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="output" id="timescale.system.elementaryStreams/AudioESDisassembler#output([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finish" id="timescale.system.elementaryStreams/AudioESDisassembler#finish()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOutputTools" id="timescale.system.elementaryStreams/AudioESDisassembler#getOutputTools()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="AudioESDisassembler" id="timescale.system.elementaryStreams/AudioESDisassembler#AudioESDisassembler(Ltimescale.system.metadata.CollectionPES;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AudioESTimescaleFacade" location="30,41" size="208,157" id="timescale.system.elementaryStreams/AudioESTimescaleFacade" runTimeClassModel="finishProcessment(),isFinished(),getStreamID(),AudioESTimescaleFacade(Ljava.lang.String;),isFinished,streamID,run(),setFinalInstant(D)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="111,36"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="183,108">
+      <children xsi:type="editmodel:MethodEditModel" name="AudioESTimescaleFacade" id="timescale.system.elementaryStreams/AudioESTimescaleFacade#AudioESTimescaleFacade(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStreamID" id="timescale.system.elementaryStreams/AudioESTimescaleFacade#getStreamID()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isFinished" id="timescale.system.elementaryStreams/AudioESTimescaleFacade#isFinished()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finishProcessment" id="timescale.system.elementaryStreams/AudioESTimescaleFacade#finishProcessment()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFinalInstant" id="timescale.system.elementaryStreams/AudioESTimescaleFacade#setFinalInstant(D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.system.elementaryStreams/AudioESTimescaleFacade#run()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SystemInputTools" location="30,240" size="330,319" id="timescale.system.metadata/SystemInputTools" runTimeClassModel="read([BII),getBytes(I),lookBitsAhead(Ljava.lang.String;),getCollectedPES(),reset(),close(),getTail(),SystemInputTools(Ltimescale.system.metadata.CollectionPES;),getActualByteIndex(),getType(),getActualPES(),getBits(I),getInputName(),initCollectedPES(),nextStartCode(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="124,270">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemInputTools" id="timescale.system.metadata/SystemInputTools#SystemInputTools(Ltimescale.system.metadata.CollectionPES;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="timescale.system.metadata/SystemInputTools#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getActualByteIndex" id="timescale.system.metadata/SystemInputTools#getActualByteIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getActualPES" id="timescale.system.metadata/SystemInputTools#getActualPES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBits" id="timescale.system.metadata/SystemInputTools#getBits(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBytes" id="timescale.system.metadata/SystemInputTools#getBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCollectedPES" id="timescale.system.metadata/SystemInputTools#getCollectedPES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getInputName" id="timescale.system.metadata/SystemInputTools#getInputName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTail" id="timescale.system.metadata/SystemInputTools#getTail()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getType" id="timescale.system.metadata/SystemInputTools#getType()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initCollectedPES" id="timescale.system.metadata/SystemInputTools#initCollectedPES()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="lookBitsAhead" id="timescale.system.metadata/SystemInputTools#lookBitsAhead(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="nextStartCode" id="timescale.system.metadata/SystemInputTools#nextStartCode(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="read" id="timescale.system.metadata/SystemInputTools#read([BII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="reset" id="timescale.system.metadata/SystemInputTools#reset()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

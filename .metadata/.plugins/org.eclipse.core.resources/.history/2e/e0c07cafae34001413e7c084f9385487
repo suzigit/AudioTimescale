@@ -1,0 +1,82 @@
+package newtonmethod;
+
+class NumberTwoBases {
+	long number;
+	int base;	
+	int numberNewBase[];
+	
+	public NumberTwoBases (long number, int base) {
+		this.number = number;
+		this.base=base;
+		this.createNumberNewBase();
+	}
+
+	public NumberTwoBases (int[] numberNewBase, int base) {
+		this.numberNewBase = numberNewBase;
+		this.base=base;
+		//TODO: nem sempre criar...
+		this.createNumberOriginalBase();
+	}
+	
+	
+	/* Retorna um array de int. Cada elemento do array eh um digito na nova base.
+	 * Quanto menor o indice do array menos significativo eh o digito do numero.
+	 */
+	private void createNumberNewBase() {
+		
+		String sDigits = "";
+		long n = this.number;
+		while (n>=base) {
+			sDigits += (int) n%base;
+			n/=base;
+		}
+		sDigits += n;
+//		System.out.println("sDigits=" + sDigits);
+		
+		int[] digits = new int[sDigits.length()];
+		
+		for (int i=0; i<digits.length; i++) {
+			digits[i] = Character.digit(sDigits.charAt(i),2);
+		}
+		this.numberNewBase = digits;
+	}
+	
+	private void createNumberOriginalBase() {
+		long n=0;
+		for (int i=0;i<this.numberNewBase.length;i++) {
+			n+= (this.numberNewBase[i] << (this.numberNewBase.length-i) ); 
+		}
+		this.number = n;
+	}
+	
+	public void printDigitsNewBase () {
+		System.out.print("Number=" + this.number +  " - Digits=");
+		for (int i=numberNewBase.length-1; i>=0; i--) {
+			System.out.print("" + numberNewBase[i]);
+		}
+	}
+	
+	public void print () {
+		System.out.print("Number=" + this.number +  " - Digits=");
+		for (int i=numberNewBase.length-1; i>=0; i--) {
+			System.out.print("" + numberNewBase[i] + "-");
+		}
+		System.out.println("");
+	}
+	
+	public int getNumberDigitsOfNewBase() {
+		return this.numberNewBase.length;
+	}	
+	
+	public String toString () {
+		return this.number+"";
+	}
+	
+	public static void main (String args[]) {
+		int i = 11;
+		NumberTwoBases n = new NumberTwoBases(i, 2);
+		n.print();
+		n.createNumberOriginalBase();
+		n.print();
+	}
+}

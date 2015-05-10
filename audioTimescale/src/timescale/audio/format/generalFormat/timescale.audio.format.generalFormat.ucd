@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="802,591" id="timescale.audio.format.generalFormat" metadata="uml2-1.0" initialized="true" zoom="0.9" scrolledY="29" tag="1000" key="323030353039323720617564696F54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="Frame" location="30,40" size="214,337" id="timescale.audio.format.generalFormat/Frame" runTimeClassModel="getNumberOfBorrowBytes(),getId(),toString(),clone(),header,physicalData,getPhysicalData(),toBytes(),id,Frame(Ltimescale.audio.format.generalFormat.Header;Ltimescale.audio.format.generalFormat.DataField;),invalidateBorrowBytes(),maxNumberOfBorrowedBytes(),incrementNumberOfBorrowBytes(I),setId(Ltimescale.data.ElementID;),isValidBorrowBytes(),getHeader()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="149,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="header" id="timescale.audio.format.generalFormat/Frame#header"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="timescale.audio.format.generalFormat/Frame#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="physicalData" id="timescale.audio.format.generalFormat/Frame#physicalData"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="191,234">
+      <children xsi:type="editmodel:MethodEditModel" name="Frame" id="timescale.audio.format.generalFormat/Frame#Frame(Ltimescale.audio.format.generalFormat.Header;Ltimescale.audio.format.generalFormat.DataField;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="timescale.audio.format.generalFormat/Frame#clone()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getHeader" id="timescale.audio.format.generalFormat/Frame#getHeader()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" id="timescale.audio.format.generalFormat/Frame#getId()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberOfBorrowBytes" id="timescale.audio.format.generalFormat/Frame#getNumberOfBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPhysicalData" id="timescale.audio.format.generalFormat/Frame#getPhysicalData()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="incrementNumberOfBorrowBytes" id="timescale.audio.format.generalFormat/Frame#incrementNumberOfBorrowBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="invalidateBorrowBytes" id="timescale.audio.format.generalFormat/Frame#invalidateBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidBorrowBytes" id="timescale.audio.format.generalFormat/Frame#isValidBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="maxNumberOfBorrowedBytes" id="timescale.audio.format.generalFormat/Frame#maxNumberOfBorrowedBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setId" id="timescale.audio.format.generalFormat/Frame#setId(Ltimescale.data.ElementID;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.audio.format.generalFormat/Frame#toBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="timescale.audio.format.generalFormat/Frame#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="FramesCollection" location="510,40" size="174,265" id="timescale.audio.format.generalFormat/FramesCollection" runTimeClassModel="iterator(),isValidIndex(I),elementAtById(Ltimescale.data.ElementID;),size(),add(Ltimescale.audio.format.generalFormat.Frame;),FramesCollection(),elementAt(I),add(ILtimescale.audio.format.generalFormat.Frame;),isLast(Ltimescale.data.ElementID;),lengthLogicalDataInBytes(I),remove(I),indexInCollection(Ltimescale.data.ElementID;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="151,216">
+      <children xsi:type="editmodel:MethodEditModel" name="FramesCollection" id="timescale.audio.format.generalFormat/FramesCollection#FramesCollection()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="add" location="295,995" id="timescale.audio.format.generalFormat/FramesCollection#add(Ltimescale.audio.format.generalFormat.Frame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="add" id="timescale.audio.format.generalFormat/FramesCollection#add(ILtimescale.audio.format.generalFormat.Frame;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="elementAt" id="timescale.audio.format.generalFormat/FramesCollection#elementAt(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="elementAtById" id="timescale.audio.format.generalFormat/FramesCollection#elementAtById(Ltimescale.data.ElementID;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexInCollection" id="timescale.audio.format.generalFormat/FramesCollection#indexInCollection(Ltimescale.data.ElementID;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isLast" id="timescale.audio.format.generalFormat/FramesCollection#isLast(Ltimescale.data.ElementID;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidIndex" id="timescale.audio.format.generalFormat/FramesCollection#isValidIndex(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="iterator" id="timescale.audio.format.generalFormat/FramesCollection#iterator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="lengthLogicalDataInBytes" id="timescale.audio.format.generalFormat/FramesCollection#lengthLogicalDataInBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="remove" id="timescale.audio.format.generalFormat/FramesCollection#remove(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="size" id="timescale.audio.format.generalFormat/FramesCollection#size()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Header" location="250,40" size="251,157" id="timescale.audio.format.generalFormat/Header" runTimeClassModel="clone(),borrowBytesHandler,getTimeDuration(),getBorrowBytesHandler(),setBorrowBytes(Ltimescale.audio.format.generalFormat.BorrowBytesHandler;),toBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="228,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="borrowBytesHandler" id="timescale.audio.format.generalFormat/Header#borrowBytesHandler"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="147,90">
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="timescale.audio.format.generalFormat/Header#clone()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBorrowBytesHandler" id="timescale.audio.format.generalFormat/Header#getBorrowBytesHandler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTimeDuration" id="timescale.audio.format.generalFormat/Header#getTimeDuration()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setBorrowBytes" id="timescale.audio.format.generalFormat/Header#setBorrowBytes(Ltimescale.audio.format.generalFormat.BorrowBytesHandler;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.audio.format.generalFormat/Header#toBytes()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="BorrowBytesHandler" location="470,318" size="214,171" stereotype="interface" id="timescale.audio.format.generalFormat/BorrowBytesHandler" runTimeClassModel="getNumberOfBorrowBytes(),invalidateBorrowBytes(),maxNumberOfBorrowedBytes(),clone(),incrementNumberOfBorrowBytes(I),isValidBorrowBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="191,108">
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="timescale.audio.format.generalFormat/BorrowBytesHandler#clone()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberOfBorrowBytes" id="timescale.audio.format.generalFormat/BorrowBytesHandler#getNumberOfBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="incrementNumberOfBorrowBytes" id="timescale.audio.format.generalFormat/BorrowBytesHandler#incrementNumberOfBorrowBytes(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="invalidateBorrowBytes" id="timescale.audio.format.generalFormat/BorrowBytesHandler#invalidateBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidBorrowBytes" id="timescale.audio.format.generalFormat/BorrowBytesHandler#isValidBorrowBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="maxNumberOfBorrowedBytes" id="timescale.audio.format.generalFormat/BorrowBytesHandler#maxNumberOfBorrowedBytes()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DataField" location="317,239" size="118,229" id="timescale.audio.format.generalFormat/DataField" runTimeClassModel="DataField([B),clone(),toString(),setData([BII),lengthInBytes(),substring(I),data,getData(),substring(II),toBytes()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="73,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="data" id="timescale.audio.format.generalFormat/DataField#data"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,162">
+      <children xsi:type="editmodel:MethodEditModel" name="DataField" id="timescale.audio.format.generalFormat/DataField#DataField([B)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clone" id="timescale.audio.format.generalFormat/DataField#clone()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getData" id="timescale.audio.format.generalFormat/DataField#getData()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="lengthInBytes" id="timescale.audio.format.generalFormat/DataField#lengthInBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setData" id="timescale.audio.format.generalFormat/DataField#setData([BII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="substring" id="timescale.audio.format.generalFormat/DataField#substring(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="substring" id="timescale.audio.format.generalFormat/DataField#substring(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toBytes" id="timescale.audio.format.generalFormat/DataField#toBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="timescale.audio.format.generalFormat/DataField#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DataFieldHandler" location="29,380" size="194,157" id="timescale.audio.format.generalFormat/DataFieldHandler" runTimeClassModel="DataFieldHandler(Ltimescale.audio.format.generalFormat.FramesCollection;),getData(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;I),findIndexBeginLogicalData(I),incrementTuplaIndex(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;I),setData(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;[B),lengthInBytesBetweenTuplas(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="171,108">
+      <children xsi:type="editmodel:MethodEditModel" name="DataFieldHandler" id="timescale.audio.format.generalFormat/DataFieldHandler#DataFieldHandler(Ltimescale.audio.format.generalFormat.FramesCollection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findIndexBeginLogicalData" id="timescale.audio.format.generalFormat/DataFieldHandler#findIndexBeginLogicalData(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getData" id="timescale.audio.format.generalFormat/DataFieldHandler#getData(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="incrementTuplaIndex" id="timescale.audio.format.generalFormat/DataFieldHandler#incrementTuplaIndex(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="lengthInBytesBetweenTuplas" id="timescale.audio.format.generalFormat/DataFieldHandler#lengthInBytesBetweenTuplas(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setData" id="timescale.audio.format.generalFormat/DataFieldHandler#setData(Ltimescale.audio.format.generalFormat.AMainDataHandler.TuplaIndex;[B)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=7" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler>
+      <guides position="233"/>
+    </topRuler>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

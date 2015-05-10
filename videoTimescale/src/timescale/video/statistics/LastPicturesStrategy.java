@@ -1,0 +1,83 @@
+/*
+ * Created on 25/08/2004
+ * 
+ * This class is based in the information contained in Recommendation H.262
+ * Generic coding of moving pictures and associated audio information: Video
+ */
+
+package timescale.video.statistics;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+import timescale.video.utils.Constants;
+
+/**
+ * This strategy is based on the last pictures read. The number of pictures to be considered is
+ * specified by "number" parameter. This strategy benefits the information obtained from the last
+ * pictures in the stream. Using this strategy means that all new information (but the first
+ * (number - 1)) has the same influence in calculations.
+ * @author Sergio Cavendish
+ */
+public final class LastPicturesStrategy extends StatsStrategy {
+
+	private int maxNumberOfPictures;
+	private int numberOfPictures;
+	private Vector queue;
+
+	/*
+	 * Recebe a quantidade máxima de quadros que devem ser considerados na estratégia.
+	 */
+	public LastPicturesStrategy(int max) {
+
+		this.maxNumberOfPictures = max;
+		this.numberOfPictures = 0;
+		this.queue = new Vector();
+	}
+	
+	/*
+	 * Caso não seja escolhido o número máximo de quadros a considerar, este construtor 
+	 * utiliza o valor default 50.
+	 */
+	public LastPicturesStrategy(){
+		this(50);
+	}
+
+	public void updateStats(int elementType, Stats stats) {
+
+		if (numberOfPictures < maxNumberOfPictures) {
+			stats.incrementsCounter(elementType);
+			if (elementType == Constants.I_PIC
+				|| elementType == Constants.P_PIC
+				|| elementType == Constants.B_PIC
+				|| elementType == Constants.UNKNOWN_PIC)
+				numberOfPictures++;
+			enqueue(elementType);
+		} else {
+			Enumeration enume = queue.elements();
+			int nextElement, lastElement;
+
+			do {
+				lastElement = dequeue();
+				stats.decrementsCounter(lastElement);
+
+				nextElement = ((Integer) enume.nextElement()).intValue();
+				stats.incrementsCounter(nextElement);
+				stats.incrementsCounter(nextElement);
+			} while (
+				enume.hasMoreElements()
+					&& (lastElement != Constants.I_PIC
+						|| lastElement != Constants.P_PIC
+						|| lastElement != Constants.B_PIC
+						|| lastElement != Constants.UNKNOWN_PIC));
+		}
+	}
+
+	private void enqueue(int element) {
+		queue.addElement(new Integer(element));
+	}
+
+	private int dequeue() {
+		return ((Integer) queue.remove(0)).intValue();
+	}
+}

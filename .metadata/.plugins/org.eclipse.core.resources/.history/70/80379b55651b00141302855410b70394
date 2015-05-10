@@ -1,0 +1,21 @@
+
+public class RadixSort {
+
+	public static void main(String[] args) {
+		RadixSort ms = new RadixSort();
+		int numbers[] = {1,4,7,4,2,-6,10,2,12,9,11,0,13,6,3,8,5};
+		
+		ms.changeBase(numbers);
+		//numbers = ms.sort(numbers);
+	}
+
+	private void changeBase(int[] numbers) {
+		for (int i=0; i<numbers.length; i++) {
+			int n = numbers[i];
+		}
+	}
+	
+	
+	
+
+}

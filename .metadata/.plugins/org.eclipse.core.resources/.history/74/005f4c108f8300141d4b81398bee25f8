@@ -1,0 +1,28 @@
+package tries;
+
+public class TrieST <Value>{
+
+	private static final int R = 256;
+	private Node root = new Node();
+	
+	public static class Node {
+		private Object value;
+		private Node[] next = new Node[R];
+	}
+	
+	public void put (String key, Value v) {
+		root = put (root, key, v, 0);
+	}
+	
+	public Node put (Node x, String key, Value v, int d) {
+		if (x==null) x= new Node(); 
+		if (d==key.length()) {
+			x.value = v;
+			return x;
+		}
+		char c = key.charAt(d);
+		
+	}
+	
+
+}

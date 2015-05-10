@@ -1,0 +1,90 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
+
+public class RadixSort {
+
+	int maxNValue = 30;
+	int base = 2;	
+
+	//calcula previamente na construcao da classe
+	int maxNDigits;
+	OneDigitListOfAllNumbers[] matrixToSort;
+	
+	public RadixSort() {
+		//O numero maximo de bits sera log de MAX_VALUE na base k
+		maxNDigits = (int) (Math.log(this.maxNValue)/Math.log(base)) + 1;
+		matrixToSort = new OneDigitListOfAllNumbers[base];
+		
+	}
+
+	public static void main(String[] args) {
+		RadixSort ms = new RadixSort();
+		int numbers[] = {1,4,7,4,2,10,2,12,9,11,0,13,6,3,8,5};
+		int numbersInNewBase [][] = new int[numbers.length][ms.base];
+				
+		for (int i=0; i<numbers.length; i++) {
+			numbersInNewBase[i] = ms.getDigitsInNewBase(numbers[i]);
+			ms.printDigits(numbers[i], numbersInNewBase[i]);
+		}				
+		
+		ms.sort(numbersInNewBase);
+		for (int[] i:numbersInNewBase) {
+			
+		}
+		
+	}
+	
+	private void sort(int[][] numbers) {
+		for (int indexDigitPosition=0; indexDigitPosition<this.maxNDigits;indexDigitPosition++) {
+			for (int number=0; number<numbers.length; number++) {
+				if (indexDigitPosition>0) {
+					//Precisa remover o numero de onde ele estava
+					int lastDigitOfANumber = numbers[number][indexDigitPosition-1];
+					matrixToSort[lastDigitOfANumber].remove(numbers[number]);					
+				}
+				
+				//Insere no local correto
+				int digitOfANumber = numbers[number][indexDigitPosition];
+				matrixToSort[digitOfANumber].insert(numbers[number]);
+			}
+			
+		}
+	}
+
+	private void printDigits (int number, int[] digits) {
+		System.out.println("n=" + number);
+		for (int i=digits.length-1; i>=0; i--) {
+			System.out.print("" + digits[i]);
+		}
+		System.out.println("");		
+	}
+
+	/* Retorna um array de int. Cada elemento do array eh um digito na nova base.
+	 * Quanto menor o indice do array menos significativo eh o digito do numero.
+	 */
+	private int[] getDigitsInNewBase(int number) {
+		int[] digits = new int[this.maxNDigits];
+		for (int i=0; i<digits.length; i++) {
+			digits[i] = number%base;
+			number/=base;
+		}
+		return digits;
+	}
+	
+
+}
+
+class OneDigitListOfAllNumbers {
+	
+	public ArrayList<int[]> list = new ArrayList<>();
+	
+	public void insert(int [] n) {
+		this.list.add(n);
+	}
+	
+	public void remove (int[] n) {
+		int index = list.indexOf(n);
+		list.remove(index);
+	}
+}

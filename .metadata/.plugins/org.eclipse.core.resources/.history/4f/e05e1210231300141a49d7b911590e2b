@@ -1,0 +1,23 @@
+
+public class Heap {
+	
+	private int numbers[] = {1,4,7,10,3,7,7};
+	
+	public void createHeap() {
+		for (int i=0;i<numbers.length/2+1;i++) {
+			heapfy(i);
+		}
+		
+	}
+	
+	private void heapfy(int index) {
+		
+		int indexLeftChildren = 2*index;
+		int indexRightChildren = 2*index+1;
+		
+		while (hasLeftChildren(index)) {
+			if (numbers[index] > numbers[index])
+		}
+	}
+
+}

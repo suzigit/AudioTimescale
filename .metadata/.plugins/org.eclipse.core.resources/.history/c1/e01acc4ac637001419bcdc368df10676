@@ -1,0 +1,155 @@
+package newtonmethod;
+
+public class KaratsubaMultiplicationBase2 {
+
+
+	public static long squareRootOfTwo (int power2ofR, long a, ) {
+		long initialValue = 1;
+		
+		//Iteration
+		long xNext = initialValue;
+		for(int i=0; i<power2ofR; i++) {
+			xNext = (xNext + divide (a, xNext)) >> 1;  
+		}
+		
+	}
+	
+	public static long divide (long a, long b) {
+		return divide (16,a,b);
+	} 
+	
+	private static long divide (int power2ofR, long a, long b) {
+				
+		//Initial Value
+		String sB = getBinaryString(b);
+		int digitsofB = sB.length();
+		long power2ofInitialValue = power2ofR-(digitsofB-1); 
+		long initialValue = 1 << power2ofInitialValue;
+		
+		//Iteration
+		long xNext = initialValue;
+		for(int i=0; i<power2ofR; i++) {
+			long xNextSquare = multiply (xNext, xNext);
+			xNext = (xNext << 1) - (multiply(b, xNextSquare) >> power2ofR);  
+		}
+		
+		
+		long resultWithPrecision = multiply(xNext, a);
+		long result = resultWithPrecision >> power2ofR;
+				
+		
+		return result;
+	}
+
+	
+	//supondo n1 e n2 > 0
+	public static long multiply (long n1, long n2) {
+				
+		String s1 = getBinaryString(n1);
+		String s2 = getBinaryString(n2);
+				
+		int numberOfDigits = getMaxNumberOfDigits(s1,s2);
+		long result = 0;
+		
+		if (numberOfDigits < 3) {
+			result  = n1*n2;
+		}
+		
+		else {
+			int totalDigitsToWork = (numberOfDigits >> 1); 
+			int digitsofLSB = numberOfDigits - totalDigitsToWork;
+			
+			
+			long n1MSB = 0;
+			long n1LSB = 0;
+			String sTemp;
+
+			if (s1.length()<=digitsofLSB) {
+				n1LSB = getNumber(s1);				
+			}
+			else {
+				int digitsOfMSB = s1.length()-digitsofLSB;
+				sTemp = s1.substring(0, digitsOfMSB);
+				n1MSB = getNumber(sTemp);
+
+				sTemp = s1.substring(digitsOfMSB);
+				n1LSB = getNumber(sTemp);				
+			}
+			
+
+
+			long n2MSB = 0;
+			long n2LSB = 0;
+
+			if (s2.length()<=digitsofLSB) {
+				n2LSB = getNumber(s2);				
+			}
+			else {
+				int digitsOfMSB = s2.length()-digitsofLSB;
+				sTemp = s2.substring(0, digitsOfMSB);
+				n2MSB = getNumber(sTemp);
+
+				sTemp = s2.substring(digitsOfMSB);
+				n2LSB = getNumber(sTemp);				
+			}
+			
+			
+			
+						
+			long n1n2MSB = multiply (n1MSB, n2MSB);
+			long n1n2LSB = multiply (n1LSB, n2LSB);
+			
+			long firstPart = multiply ((n1MSB+n1LSB), (n2MSB+n2LSB));
+			
+			long n1n2Middle = firstPart - n1n2MSB - n1n2LSB;
+			
+
+			long n1n2MSBAdjusted = ((n1n2MSB << digitsofLSB) << digitsofLSB);
+			long n1n2MiddleAdjusted = n1n2Middle << digitsofLSB;
+			
+			result = n1n2MSBAdjusted  + n1n2MiddleAdjusted + n1n2LSB;
+			
+		}
+		
+		return result;
+	}
+
+
+	private static String getBinaryString(long n1) {
+		return Long.toBinaryString(n1);
+	}
+
+
+	private static long getNumber(String sTemp) {
+		return Long.parseLong(sTemp,2);
+	}
+	
+
+	private static int getMaxNumberOfDigits(String s1, String s2) {
+		int length1 = getNumberDigits(s1);
+		int length2 = getNumberDigits(s2);
+		int result =  (length1>length2)?length1:length2;
+		return result;
+	}
+	
+	
+	private static int getNumberDigits(String s) {
+		return s.length();
+	}
+
+
+	public static void main(String[] args) {
+		long n1= 0b111011110;
+		long n2= 0b1010;
+						
+		long result = multiply(n1, n2);
+		System.out.println("result karatsuba=" + result);
+		System.out.println("result normal   =" + (n1*n2));		
+	
+		result = divide(n1, n2);
+		System.out.println("result karatsuba=" + result);
+		System.out.println("result normal   =" + (n1/n2));		
+		
+	}
+
+}

@@ -1,0 +1,42 @@
+
+public class RadixSort {
+
+	int maxNValue = 30;
+	int base = 2;	
+
+	//calcula previamente na construcao da classe
+	int maxNDigits;
+	
+	public RadixSort() {
+		//O numero maximo de bits sera log de MAX_VALUE na base k
+		maxNDigits = (int) (Math.log(this.maxNValue)/Math.log(base)) + 1; 
+	}
+
+	public static void main(String[] args) {
+		RadixSort ms = new RadixSort();
+		int numbers[] = {1,4,7,4,2,-6,10,2,12,9,11,0,13,6,3,8,5};
+		
+		for (int i=0; i<numbers.length; i++) {
+			int[] digits = ms.changeBase(numbers[i]);
+			
+		
+		}
+		
+		
+		//numbers = ms.sort(numbers);
+	}
+
+	private int[] changeBase(int number) {		
+		int[] digits = new int[this.maxNDigits];
+		for (int i=0; i<digits.length; i++) {
+			digit[i] = number%base;
+			 = number;
+
+		}
+		return digits;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
+
+public class RadixSort {
+
+	int maxNValue = 30;
+	int base = 2;	
+
+	//calcula previamente na construcao da classe
+	int maxNDigits;
+	OneDigitListOfAllNumbers[] matrixToSort;
+	
+	public RadixSort() {
+		//O numero maximo de bits sera log de MAX_VALUE na base k
+		maxNDigits = (int) (Math.log(this.maxNValue)/Math.log(base)) + 1;
+		matrixToSort = new OneDigitListOfAllNumbers[base];
+		
+	}
+
+	public static void main(String[] args) {
+		RadixSort ms = new RadixSort();
+		int numbers[] = {1,4,7,4,2,10,2,12,9,11,0,13,6,3,8,5};
+		
+		for (int i=0; i<numbers.length; i++) {
+			int[] digits = ms.getDigitsInNewBase(numbers[i]);
+			ms.printDigits(numbers[i], digits);
+		}				
+		
+		ms.sort(numbers);
+	}
+	
+	private void sort(int[] numbers) {
+		for (int i=0; i<)
+		return null;
+	}
+
+	private void printDigits (int number, int[] digits) {
+		System.out.println("n=" + number);
+		for (int i=digits.length-1; i>=0; i--) {
+			System.out.print("" + digits[i]);
+		}
+		System.out.println("");		
+	}
+
+	/* Retorna um array de int. Cada elemento do array eh um digito na nova base.
+	 * Quanto menor o indice do array menos significativo eh o digito do numero.
+	 */
+	private int[] getDigitsInNewBase(int number) {
+		int[] digits = new int[this.maxNDigits];
+		for (int i=0; i<digits.length; i++) {
+			digits[i] = number%base;
+			number/=base;
+		}
+		return digits;
+	}
+	
+
+}
+
+class OneDigitListOfAllNumbers {
+	
+	public ArrayList<int[]> list = new ArrayList<>();
+}

@@ -1,0 +1,19 @@
+package graph;
+
+
+public class Graph {
+
+	private int nodes[];
+	//Bag b = new TreeBag();
+	
+	public Graph() {
+		
+		//this.nodes = new 
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+
+}

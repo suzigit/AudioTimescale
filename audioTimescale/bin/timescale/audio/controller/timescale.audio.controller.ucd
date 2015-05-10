@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="918,801" id="timescale.audio.controller" metadata="uml2-1.0" initialized="true" tag="1000" key="323030353039323720617564696F54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="AudioController" location="370,20" size="434,301" id="timescale.audio.controller/AudioController" runTimeClassModel="disassembler,getDisassembler(),handleOneFrame(),addAnchorListener(Ltimescale.event.TimescaleInstantListener;),setFrameDuration(),finish(),outputInitialBytes(),AudioController(Ltimescale.audio.assembler.IAudioAssembler;Ltimescale.audio.assembler.IAudioDisassembler;Ltimescale.data.ParametersProcessment;),setRate(Ltimescale.data.Factor;),run()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="assembler" id="timescale.audio.controller/AudioController#assembler"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="disassembler" id="timescale.audio.controller/AudioController#disassembler"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parameters" id="timescale.audio.controller/AudioController#parameters"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="processor" id="timescale.audio.controller/AudioController#processor"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="frames" id="timescale.audio.controller/AudioController#frames"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="411,162">
+      <children xsi:type="editmodel:MethodEditModel" name="AudioController" id="timescale.audio.controller/AudioController#AudioController(Ltimescale.audio.assembler.IAudioAssembler;Ltimescale.audio.assembler.IAudioDisassembler;Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="handleOneFrame" id="timescale.audio.controller/AudioController#handleOneFrame()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.audio.controller/AudioController#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="outputInitialBytes" id="timescale.audio.controller/AudioController#outputInitialBytes()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="finish" id="timescale.audio.controller/AudioController#finish()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFrameDuration" id="timescale.audio.controller/AudioController#setFrameDuration()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setRate" id="timescale.audio.controller/AudioController#setRate(Ltimescale.data.Factor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.audio.controller/AudioController#getDisassembler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAnchorListener" id="timescale.audio.controller/AudioController#addAnchorListener(Ltimescale.event.TimescaleInstantListener;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AudioTimescaleFacade" location="30,280" size="334,247" id="timescale.audio.controller/AudioTimescaleFacade" runTimeClassModel="config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;),stop(),addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;),setFactor(Ltimescale.data.Factor;),getDisassembler(),addAnchorListener(Ltimescale.event.TimescaleInstantListener;),getReport(),run()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="controller" id="timescale.audio.controller/AudioTimescaleFacade#controller"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parameters" id="timescale.audio.controller/AudioTimescaleFacade#parameters"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="listeners" id="timescale.audio.controller/AudioTimescaleFacade#listeners"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="311,144">
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.audio.controller/AudioTimescaleFacade#config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.audio.controller/AudioTimescaleFacade#getDisassembler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.audio.controller/AudioTimescaleFacade#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.audio.controller/AudioTimescaleFacade#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFactor" id="timescale.audio.controller/AudioTimescaleFacade#setFactor(Ltimescale.data.Factor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleListener" id="timescale.audio.controller/AudioTimescaleFacade#addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAnchorListener" id="timescale.audio.controller/AudioTimescaleFacade#addAnchorListener(Ltimescale.event.TimescaleInstantListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReport" id="timescale.audio.controller/AudioTimescaleFacade#getReport()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.facade/MediaTimescaleFacade&lt;-timescale.audio.controller/AudioTimescaleFacade" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="167,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="167,207"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@sourceConnections.0" name="MediaTimescaleFacade" location="30,20" size="334,207" stereotype="interface" id="timescale.facade/MediaTimescaleFacade">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,144">
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.facade/MediaTimescaleFacade#config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.facade/MediaTimescaleFacade#getDisassembler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleListener" id="timescale.facade/MediaTimescaleFacade#addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAnchorListener" id="timescale.facade/MediaTimescaleFacade#addAnchorListener(Ltimescale.event.TimescaleInstantListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.facade/MediaTimescaleFacade#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFactor" id="timescale.facade/MediaTimescaleFacade#setFactor(Ltimescale.data.Factor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReport" id="timescale.facade/MediaTimescaleFacade#getReport()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.facade/MediaTimescaleFacade#run()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

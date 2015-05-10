@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="918,563" id="timescale.system.controller" metadata="uml2-1.0" initialized="true" tag="1000" key="32303035303932372073797374656D54696D657363616C652F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="SystemController" location="40,40" size="352,175" id="timescale.system.controller/SystemController" runTimeClassModel="actionPosTimescale(Ltimescale.event.TimescaleFinishedEvent;),SystemController(Ltimescale.system.data.ElementaryStreams;Ltimescale.data.ParametersProcessment;),run()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="streams" id="timescale.system.controller/SystemController#streams"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="parameters" id="timescale.system.controller/SystemController#parameters"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="controllerData" id="timescale.system.controller/SystemController#controllerData"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="actualInstantInOriginalStream" id="timescale.system.controller/SystemController#actualInstantInOriginalStream"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="329,54">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemController" id="timescale.system.controller/SystemController#SystemController(Ltimescale.system.data.ElementaryStreams;Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.system.controller/SystemController#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPosTimescale" id="timescale.system.controller/SystemController#actionPosTimescale(Ltimescale.event.TimescaleFinishedEvent;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ControllerData" location="391,40" size="278,308" id="timescale.system.data/ControllerData" runTimeClassModel="timescale.system.data.ControllerData.StreamReadyInfo,addResult(Ljava.lang.String;Ltimescale.data.RunResult;),setEndOfThread(Ljava.lang.String;),ControllerData(),addStream(Ljava.lang.String;),clearThreads(),waitForThreads(),getResult(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="hashReady" id="timescale.system.data/ControllerData#hashReady"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="hashResults" id="timescale.system.data/ControllerData#hashResults"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="waitThreads" id="timescale.system.data/ControllerData#waitThreads"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="161,126">
+      <children xsi:type="editmodel:MethodEditModel" name="ControllerData" id="timescale.system.data/ControllerData#ControllerData()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clearThreads" id="timescale.system.data/ControllerData#clearThreads()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addStream" id="timescale.system.data/ControllerData#addStream(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="waitForThreads" id="timescale.system.data/ControllerData#waitForThreads()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEndOfThread" id="timescale.system.data/ControllerData#setEndOfThread(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addResult" id="timescale.system.data/ControllerData#addResult(Ljava.lang.String;Ltimescale.data.RunResult;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getResult" id="timescale.system.data/ControllerData#getResult(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="152,69">
+      <children xsi:type="editmodel:ClassEditModel" name="StreamReadyInfo" size="152,67" id="timescale.system.data/ControllerData$StreamReadyInfo" runTimeClassModel="StreamReadyInfo(Z)">
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="113,18">
+          <children xsi:type="editmodel:MethodEditModel" name="StreamReadyInfo" id="timescale.system.data/ControllerData$StreamReadyInfo#StreamReadyInfo(Z)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="ElementaryStreamFacade" location="40,214" size="334,189" stereotype="interface" id="timescale.facade/ElementaryStreamFacade" runTimeClassModel="config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;),setFactor(Ltimescale.data.Factor;),addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;),isFinished(),getStreamID(),getDisassembler(),setFinalInstant(D)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,126">
+      <children xsi:type="editmodel:MethodEditModel" name="getStreamID" id="timescale.facade/ElementaryStreamFacade#getStreamID()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.facade/ElementaryStreamFacade#getDisassembler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.facade/ElementaryStreamFacade#config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFactor" id="timescale.facade/ElementaryStreamFacade#setFactor(Ltimescale.data.Factor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFinalInstant" id="timescale.facade/ElementaryStreamFacade#setFinalInstant(D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleListener" id="timescale.facade/ElementaryStreamFacade#addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isFinished" id="timescale.facade/ElementaryStreamFacade#isFinished()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

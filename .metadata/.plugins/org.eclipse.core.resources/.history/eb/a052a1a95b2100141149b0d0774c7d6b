@@ -1,0 +1,27 @@
+
+class ArrayTableDoubling {
+
+	private int array[];
+	
+	public ArrayTableDoubling() {
+		this.array = new int[2];
+		this.array[0]=0;
+		this.array[1]=1;
+	}
+	
+	public static void main(String[] args) {
+		ArrayTableDoubling atd = new ArrayTableDoubling();
+		System.out.println("array original=" + atd.toString());
+	}
+	
+	
+	public String toStaticString() {
+		String txt = "";
+		for(int i=0; i<this.array.length; i++) {
+			txt += this.array[i] + ", "; 
+		}
+		return txt;
+	}	
+	
+	
+}

@@ -1,0 +1,81 @@
+package newtonmethod;
+
+public class KaratsubaMultiplicationBase2 {
+
+	public static long divide (int power10ofR, long b) {
+		int d = getNumberDigits(b);
+		long power10ofInitialValue = power10ofR-d; 
+		long initialValue = (long) Math.pow(10,power10ofInitialValue);
+		long rValue = (long) Math.pow(10, power10ofR);
+		long xNext = initialValue;
+		for(int i=0; i<d; i++) {
+			xNext = (2*initialValue - multiply(b, initialValue*initialValue))/rValue;
+			initialValue = xNext;
+		}
+		return xNext;
+	}
+	
+	
+	//supondo n1 e n2 > 0
+	public static NumberTwoBases multiply (NumberTwoBases n1, NumberTwoBases n2) {
+				
+		int numberOfDigits = getMaxNumberOfDigits(n1,n2);
+		NumberTwoBases result = null;
+		
+		if (numberOfDigits < 3) {
+			result  = new NumberTwoBases(n1.number*n2.number,2);
+		}
+		
+		else {
+			int totalDigitsToWork = (numberOfDigits >> 1); 
+			//Mascaramento
+			int mask = createMask(  );
+					
+			
+			long n1MSB = (long) n1/denominator;
+			long n1LSB = n1%denominator;
+			
+			long n2MSB = (long) n2/denominator;
+			long n2LSB = n2%denominator;
+			
+			
+			long n1n2MSB = multiply (n1MSB, n2MSB);
+			long n1n2LSB = multiply (n1LSB, n2LSB);
+			
+			long firstPart = multiply ((n1MSB+n1LSB), (n2MSB+n2LSB));
+			
+			long n1n2Middle = firstPart - n1n2MSB - n1n2LSB;
+			
+			result = n1n2MSB*denominator*denominator + n1n2Middle*denominator + n1n2LSB;
+			
+		}
+		
+		return result;
+	}
+	
+	private static int getMaxNumberOfDigits(NumberTwoBases n1, NumberTwoBases n2) {
+		int length1 = n1.getNumberDigitsOfNewBase();
+		int length2 = n1.getNumberDigitsOfNewBase();
+		int result =  (length1>length2)?length1:length2;
+		return result;
+	}
+
+
+
+	public static void main(String[] args) {
+		long n1= 43254366;
+		long n2= 65423234;
+		
+		NumberTwoBases ntbN1 = new NumberTwoBases(n1, 2);
+		NumberTwoBases ntbN2 = new NumberTwoBases(n2, 2);
+		
+		
+		NumberTwoBases result = multiply(ntbN1, ntbN2);
+		System.out.println("result karatsuba=" + result.toString());
+		System.out.println("result normal   =" + (n1*n2));		
+//		System.out.println("Double max   =" + Double.MAX_VALUE);		
+//		System.out.println("Long max        =" + Long.MAX_VALUE);
+	
+	}
+
+}

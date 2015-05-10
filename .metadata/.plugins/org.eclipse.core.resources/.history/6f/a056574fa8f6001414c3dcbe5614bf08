@@ -1,0 +1,179 @@
+/*
+ * Essa classe faz parte do projeto de ajuste elastico de audio comprimido
+ * do formatador Hyperprop.
+ * Todos os direitos sao reservados.
+ * 
+ * @Copyright: Laboratorio TeleMidia
+ * @author: <a href="mailto:smbm@telemidia.puc-rio.br">Suzana Mesquita</a>
+ * Creation date: (23/08/2004)
+ */
+
+package timescale.player;
+
+import util.io.ByteOutputTools;
+import util.io.InputTools;
+import util.io.OutputTools;
+import timescale.data.FinalReport;
+import timescale.data.InstantsSet;
+import timescale.data.ParametersProcessment;
+import timescale.data.Factor;
+import timescale.assembler.IAssembler;
+import timescale.assembler.IDisassembler;
+import timescale.event.TimescaleFinishedEvent;
+import timescale.event.TimescaleFinishedListener;
+import timescale.event.TimescaleInstantListener;
+import timescale.facade.AbstractTimescaleFactory;
+import timescale.facade.MediaTimescaleFacade;
+import timescale.factory.TimescaleFactoryBuilder;
+import timescale.instantsRetrieval.OfflineInstantsRetrieval;
+import timescale.thirdPartyPlayer.IThirdPartyPlayer;
+import timescale.thirdPartyPlayer.TransmissionThirdPartPlayer;
+
+
+public class TimescalePlayer implements ITimescalePlayer, TimescaleFinishedListener {
+	
+	private MediaTimescaleFacade mediaTimescaleFacade;
+	private IThirdPartyPlayer thirdPartyPlayer;
+	
+	/** 
+	 * Cria arquivo de audio audio ajustado.
+	 * @param inputFile nome do arquivo de entrada
+	 * @param outputFile nome do arquivo de saida (pode ser null)
+	 * @param rate taxa de ajuste
+	 */
+	public void config (InputTools inputTools, String outputFile, double rate) 
+			throws Exception {		
+		config(inputTools, rate);
+		AbstractTimescaleFactory factory = TimescaleFactoryBuilder.getFactory(inputTools.getType());
+		IDisassembler disassembler = factory.getDisassembler(outputFile);
+	}
+	
+	public void config (InputTools inputTools, double rate) throws Exception {
+		AbstractTimescaleFactory factory = TimescaleFactoryBuilder.getFactory(inputTools.getType());
+		ParametersProcessment parameters = factory.getParametersProcessment(rate, null, false);
+		IAssembler assembler = factory.getAssembler(inputTools);
+		IDisassembler disassembler = factory.getDisassembler();		
+		this.mediaTimescaleFacade = factory.getMediaTimescalePlayer();		
+		this.mediaTimescaleFacade.config(assembler, disassembler, parameters);
+	}
+	
+	/** 
+	 * Cria arquivo de audio audio ajustado e configura player para toca-lo.
+	 * @param inputFile nome do arquivo de entrada
+	 * @param outputFile nome do arquivo de saida (pode ser null)
+	 * @param rate taxa de ajuste
+	 * @param ap player a exibir o arquivo de saida 
+	 */		
+	public void config (InputTools inputTools, String outputFile, 
+			double rate, IThirdPartyPlayer ap) throws Exception {
+		config(inputTools, outputFile, rate);		
+		//configura player
+		this.thirdPartyPlayer = ap;
+		this.thirdPartyPlayer.setInput(outputFile);
+	}
+	
+	
+	/** 
+	 * Cria fluxo de audio audio ajustado e configura player para toca-lo.
+	 * @param inputFile nome do arquivo de entrada
+	 * @param rate taxa de ajuste
+	 * @param ap player a exibir o fluxo ajustado 
+	 */		
+	public void config (InputTools inputTools, double rate, InstantsSet anchors, 
+			IThirdPartyPlayer ap) throws Exception {
+		AbstractTimescaleFactory factory = TimescaleFactoryBuilder.getFactory(inputTools.getType());
+		ParametersProcessment parameters = factory.getParametersProcessment(rate, anchors, true);
+		IAssembler assembler = factory.getAssembler(inputTools);
+		IDisassembler disassembler = factory.getDisassembler();
+		this.mediaTimescaleFacade = factory.getMediaTimescalePlayer();
+		this.mediaTimescaleFacade.config(assembler, disassembler, parameters);
+
+		//configura player
+		this.thirdPartyPlayer = ap;
+		ByteOutputTools outputTools = (ByteOutputTools) (disassembler.getOutputTools());        
+        InputTools inputToolsToPlayer = outputTools.getInputTools();
+        outputTools.setContentType(assembler.getType());
+        ap.setInput(inputToolsToPlayer);
+        this.mediaTimescaleFacade.addTimescaleListener(this);
+	}
+	
+	public void config (InputTools inputTools, double rate, IThirdPartyPlayer ap) 
+	throws Exception {
+		this.config(inputTools,rate,null,ap);
+	}
+
+	
+	public void run() {
+		this.mediaTimescaleFacade.run();
+	}
+	
+	/** 
+	 * Modifica taxa de ajuste a ser utilizada em ajuste elastico.
+	 * @param dRate nova taxa de ajuste
+	 */		
+	public void setFactor(double dRate) throws Exception {
+		if (this.mediaTimescaleFacade!=null) {
+		    Factor rate = new Factor(dRate);		
+			this.mediaTimescaleFacade.setFactor(rate);			
+		}
+	}
+	
+	/** 
+	 * Para realizacao de ajusta elastico.
+	 */		
+	public void stop() {
+		if (this.mediaTimescaleFacade!=null) {
+			this.mediaTimescaleFacade.stop();
+		}
+	    if (this.thirdPartyPlayer!=null) {
+	    	this.thirdPartyPlayer.stop();
+	    }
+	}
+	
+	public void abort() {
+		//TODO: fazer
+		throw new UnsupportedOperationException("Fazer abort");
+	}
+	
+	public void pause() {
+		//TODO: fazer
+		throw new UnsupportedOperationException("Fazer pause");
+	}
+	
+	public void resume() {
+		//TODO: fazer
+		throw new UnsupportedOperationException("Fazer resume");
+	}
+
+	
+	public void addTimescaleListener(TimescaleFinishedListener o) {
+		this.mediaTimescaleFacade.addTimescaleListener(o);
+	}
+	
+	public void addTimescaleInstantListener(TimescaleInstantListener listener) {
+		this.mediaTimescaleFacade.addInstantListener(listener);
+	}
+	
+	public OutputTools getOutputTools() {
+		return this.mediaTimescaleFacade.getDisassembler().getOutputTools(); 
+	}
+	
+	public IThirdPartyPlayer getThirdPartyPlayer() {
+		return this.thirdPartyPlayer;
+	}
+	
+	public FinalReport getReport() {
+		return this.mediaTimescaleFacade.getReport();
+	}
+
+	public void actionPosTimescale (TimescaleFinishedEvent event) throws Exception {
+		if (this.thirdPartyPlayer instanceof TransmissionThirdPartPlayer) {
+			((TransmissionThirdPartPlayer) this.thirdPartyPlayer).endTransmission(); 
+		}
+	}
+	
+	public double getTimescaleInstant (double originalInstant) {
+		FinalReport report = this.getReport();
+		return OfflineInstantsRetrieval.getTimescaleInstant(report, originalInstant);
+	}
+}

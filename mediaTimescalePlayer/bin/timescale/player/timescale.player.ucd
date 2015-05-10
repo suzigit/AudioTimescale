@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="954,862" id="timescale.player" metadata="uml2-1.0" initialized="true" tag="1000" key="3230303530393237206D6564696154696D657363616C65506C617965722F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="TimescalePlayer" location="40,30" size="317,391" id="timescale.player/TimescalePlayer" runTimeClassModel="stop(),pause(),getOutputTools(),setFactor(D),abort(),config(Lutil.io.InputTools;Ljava.lang.String;DLtimescale.thirdPartyPlayer.IThirdPartyPlayer;),resume(),addTimescaleInstantListener(Ltimescale.event.TimescaleInstantListener;),run(),addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;),config(Lutil.io.InputTools;D),config(Lutil.io.InputTools;Ljava.lang.String;D),config(Lutil.io.InputTools;DLtimescale.thirdPartyPlayer.IThirdPartyPlayer;),actionPosTimescale(Ltimescale.event.TimescaleFinishedEvent;),getTimescaleInstant(D),thirdPartyPlayer,config(Lutil.io.InputTools;DLtimescale.data.InstantsSet;Ltimescale.thirdPartyPlayer.IThirdPartyPlayer;),getThirdPartyPlayer(),getReport()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="182,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="thirdPartyPlayer" id="timescale.player/TimescalePlayer#thirdPartyPlayer"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="167,324">
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.player/TimescalePlayer#config(Lutil.io.InputTools;Ljava.lang.String;D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.player/TimescalePlayer#config(Lutil.io.InputTools;D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.player/TimescalePlayer#config(Lutil.io.InputTools;Ljava.lang.String;DLtimescale.thirdPartyPlayer.IThirdPartyPlayer;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.player/TimescalePlayer#config(Lutil.io.InputTools;DLtimescale.data.InstantsSet;Ltimescale.thirdPartyPlayer.IThirdPartyPlayer;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.player/TimescalePlayer#config(Lutil.io.InputTools;DLtimescale.thirdPartyPlayer.IThirdPartyPlayer;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.player/TimescalePlayer#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFactor" id="timescale.player/TimescalePlayer#setFactor(D)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.player/TimescalePlayer#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="abort" id="timescale.player/TimescalePlayer#abort()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="pause" id="timescale.player/TimescalePlayer#pause()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="resume" id="timescale.player/TimescalePlayer#resume()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleListener" id="timescale.player/TimescalePlayer#addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleInstantListener" id="timescale.player/TimescalePlayer#addTimescaleInstantListener(Ltimescale.event.TimescaleInstantListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOutputTools" id="timescale.player/TimescalePlayer#getOutputTools()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getThirdPartyPlayer" id="timescale.player/TimescalePlayer#getThirdPartyPlayer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReport" id="timescale.player/TimescalePlayer#getReport()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPosTimescale" id="timescale.player/TimescalePlayer#actionPosTimescale(Ltimescale.event.TimescaleFinishedEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTimescaleInstant" id="timescale.player/TimescalePlayer#getTimescaleInstant(D)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="MediaTimescaleFacade" location="380,30" size="334,207" stereotype="interface" id="timescale.facade/MediaTimescaleFacade" runTimeClassModel="stop(),setFactor(Ltimescale.data.Factor;),config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;),addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;),getDisassembler(),addInstantListener(Ltimescale.event.TimescaleInstantListener;),getReport(),run()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,144">
+      <children xsi:type="editmodel:MethodEditModel" name="config" id="timescale.facade/MediaTimescaleFacade#config(Ltimescale.assembler.IAssembler;Ltimescale.assembler.IDisassembler;Ltimescale.data.ParametersProcessment;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.facade/MediaTimescaleFacade#getDisassembler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTimescaleListener" id="timescale.facade/MediaTimescaleFacade#addTimescaleListener(Ltimescale.event.TimescaleFinishedListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addInstantListener" id="timescale.facade/MediaTimescaleFacade#addInstantListener(Ltimescale.event.TimescaleInstantListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.facade/MediaTimescaleFacade#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFactor" id="timescale.facade/MediaTimescaleFacade#setFactor(Ltimescale.data.Factor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getReport" id="timescale.facade/MediaTimescaleFacade#getReport()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="timescale.facade/MediaTimescaleFacade#run()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="IThirdPartyPlayer" location="380,240" size="325,135" stereotype="interface" id="timescale.thirdPartyPlayer/IThirdPartyPlayer" runTimeClassModel="stop(),setInput(Ljava.lang.Object;),play(),prepare()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="68,72">
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#setInput(Ljava.lang.Object;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AbstractTimescaleFactory" location="40,430" size="446,139" id="timescale.facade/AbstractTimescaleFactory" runTimeClassModel="getDisassembler(),getMediaTimescalePlayer(),getAssembler(Lutil.io.InputTools;),getDisassembler(Ljava.lang.String;),getParametersProcessment(DLtimescale.data.InstantsSet;Z)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,90">
+      <children xsi:type="editmodel:MethodEditModel" name="getAssembler" id="timescale.facade/AbstractTimescaleFactory#getAssembler(Lutil.io.InputTools;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.facade/AbstractTimescaleFactory#getDisassembler(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDisassembler" id="timescale.facade/AbstractTimescaleFactory#getDisassembler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMediaTimescalePlayer" id="timescale.facade/AbstractTimescaleFactory#getMediaTimescalePlayer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getParametersProcessment" id="timescale.facade/AbstractTimescaleFactory#getParametersProcessment(DLtimescale.data.InstantsSet;Z)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

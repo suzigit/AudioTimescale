@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>audioTimescaleLocalApplication</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>customizer.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/JMF/customizer.jar</locationURI>
+		</link>
+		<link>
+			<name>jmf.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/JMF/jmf.jar</locationURI>
+		</link>
+		<link>
+			<name>jmf.properties</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/JMF/jmf.properties</locationURI>
+		</link>
+		<link>
+			<name>mediaplayer.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/JMF/mediaplayer.jar</locationURI>
+		</link>
+		<link>
+			<name>multiplayer.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/JMF/multiplayer.jar</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

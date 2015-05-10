@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="918,771" id="timescale.thirdPartyPlayer" metadata="uml2-1.0" initialized="true" tag="1000" key="3230303530393237206D6564696154696D657363616C65506C617965722F736D626D">
+  <children xsi:type="editmodel:ClassEditModel" name="JMFFilePlayer" location="10,520" size="133,121" id="timescale.thirdPartyPlayer/JMFFilePlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="68,72">
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/JMFFilePlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/JMFFilePlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/JMFFilePlayer#setInput(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/JMFFilePlayer#stop()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.1/@sourceConnections.0" autoLocated="true" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer&lt;-timescale.thirdPartyPlayer/JMFFilePlayer" source="//@children.0" target="//@children.3" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="116,229" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="JMFDataSourcePlayer" location="142,520" size="183,157" id="timescale.thirdPartyPlayer/JMFDataSourcePlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,108">
+      <children xsi:type="editmodel:MethodEditModel" name="JMFDataSourcePlayer" id="timescale.thirdPartyPlayer/JMFDataSourcePlayer#JMFDataSourcePlayer(Ljavax.media.Player;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="JMFDataSourcePlayer" id="timescale.thirdPartyPlayer/JMFDataSourcePlayer#JMFDataSourcePlayer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/JMFDataSourcePlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/JMFDataSourcePlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/JMFDataSourcePlayer#setInput(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/JMFDataSourcePlayer#setInput(Ljavax.media.protocol.DataSource;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer&lt;-timescale.thirdPartyPlayer/JMFDataSourcePlayer" source="//@children.1" target="//@children.0/@sourceConnections.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.1 //@children.7/@sourceConnections.0" name="IThirdPartyPlayer" location="263,50" size="153,135" stereotype="interface" id="timescale.thirdPartyPlayer/IThirdPartyPlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="68,72">
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#setInput(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/IThirdPartyPlayer#stop()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0" name="JMFIntegratedThirdPartPlayer" location="20,235" size="233,229" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer">
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,18"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="170,180">
+      <children xsi:type="editmodel:MethodEditModel" name="JMFIntegratedThirdPartPlayer" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#JMFIntegratedThirdPartPlayer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="JMFIntegratedThirdPartPlayer" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#JMFIntegratedThirdPartPlayer(Ljavax.media.Player;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getControlPanelComponent" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#getControlPanelComponent()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVisualComponent" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#getVisualComponent()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMediaDurationInSeconds" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#getMediaDurationInSeconds()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMediaTimeInSeconds" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#getMediaTimeInSeconds()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPlayer" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#getPlayer()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#stop()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="close" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#close()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer#equals(Ljava.lang.Object;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.thirdPartyPlayer/IIntegratedThirthPartyPlayer&lt;-timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer" source="//@children.3" target="//@children.8" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="115,135"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.4/@sourceConnections.0 //@children.5/@sourceConnections.0" autoLocated="true" id="timescale.thirdPartyPlayer/IThirdPartyPlayer&lt;-timescale.thirdPartyPlayer/JMFIntegratedThirdPartPlayer" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.1/@children.1" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="116,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,135" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.9/@sourceConnections.0" name="TransmissionThirdPartPlayer" location="444,240" size="225,175" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="167,126">
+      <children xsi:type="editmodel:MethodEditModel" name="TransmissionThirdPartPlayer" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer#TransmissionThirdPartPlayer(Ljava.lang.String;II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPosPresentation" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer#actionPosPresentation(Ltimescale.event.PresentationFinishedEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="endTransmission" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer#endTransmission()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer#setInput(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer#stop()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.thirdPartyPlayer/IThirdPartyPlayer&lt;-timescale.thirdPartyPlayer/TransmissionThirdPartPlayer" source="//@children.4" target="//@children.3/@sourceConnections.1" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="112,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="WinampFilePlayer" location="260,240" size="160,139" id="timescale.thirdPartyPlayer/WinampFilePlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="114,90">
+      <children xsi:type="editmodel:MethodEditModel" name="WinampFilePlayer" id="timescale.thirdPartyPlayer/WinampFilePlayer#WinampFilePlayer(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/WinampFilePlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/WinampFilePlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/WinampFilePlayer#setInput(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/WinampFilePlayer#stop()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="timescale.thirdPartyPlayer/IThirdPartyPlayer&lt;-timescale.thirdPartyPlayer/WinampFilePlayer" source="//@children.5" target="//@children.3/@sourceConnections.1" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,30"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="JMFRTPTransmissionPlayer" location="464,520" size="218,175" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="162,126">
+      <children xsi:type="editmodel:MethodEditModel" name="JMFRTPTransmissionPlayer" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer#JMFRTPTransmissionPlayer(Ljava.lang.String;III)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPosPresentation" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer#actionPosPresentation(Ltimescale.event.PresentationFinishedEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addPlayChangingListener" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer#addPlayChangingListener(Ltimescale.event.PlayChangingListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="receiveStream" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer#receiveStream(Ljavax.media.protocol.DataSource;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer#stop()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer&lt;-timescale.thirdPartyPlayer/JMFRTPTransmissionPlayer" source="//@children.6" target="//@children.9/@sourceConnections.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="VLCFilePlayer" location="490,48" size="133,139" id="timescale.thirdPartyPlayer/VLCFilePlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="97,90">
+      <children xsi:type="editmodel:MethodEditModel" name="VLCFilePlayer" location="467,95" id="timescale.thirdPartyPlayer/VLCFilePlayer#VLCFilePlayer(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/VLCFilePlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepare" id="timescale.thirdPartyPlayer/VLCFilePlayer#prepare()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setInput" id="timescale.thirdPartyPlayer/VLCFilePlayer#setInput(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/VLCFilePlayer#stop()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="timescale.thirdPartyPlayer/IThirdPartyPlayer&lt;-timescale.thirdPartyPlayer/VLCFilePlayer" source="//@children.7" target="//@children.2" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,69" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="153,67"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.0" name="IIntegratedThirthPartyPlayer" location="10,50" size="222,135" stereotype="interface" id="timescale.thirdPartyPlayer/IIntegratedThirthPartyPlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="164,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getControlPanelComponent" id="timescale.thirdPartyPlayer/IIntegratedThirthPartyPlayer#getControlPanelComponent()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMediaDurationInSeconds" id="timescale.thirdPartyPlayer/IIntegratedThirthPartyPlayer#getMediaDurationInSeconds()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMediaTimeInSeconds" id="timescale.thirdPartyPlayer/IIntegratedThirthPartyPlayer#getMediaTimeInSeconds()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVisualComponent" id="timescale.thirdPartyPlayer/IIntegratedThirthPartyPlayer#getVisualComponent()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="VLCRTPPlayer" location="330,520" size="135,103" id="timescale.thirdPartyPlayer/VLCRTPPlayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="100,54">
+      <children xsi:type="editmodel:MethodEditModel" name="VLCRTPPlayer" id="timescale.thirdPartyPlayer/VLCRTPPlayer#VLCRTPPlayer(Ljava.lang.String;Ljava.lang.String;II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="play" id="timescale.thirdPartyPlayer/VLCRTPPlayer#play()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stop" id="timescale.thirdPartyPlayer/VLCRTPPlayer#stop()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.6/@sourceConnections.0" autoLocated="true" id="timescale.thirdPartyPlayer/TransmissionThirdPartPlayer&lt;-timescale.thirdPartyPlayer/VLCRTPPlayer" source="//@children.9" target="//@children.4" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="67,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="112,175" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

@@ -1,0 +1,9 @@
+package newtonmethod;
+
+public class NumberTwoBases {
+
+	public NumberTwoBases() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

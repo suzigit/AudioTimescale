@@ -1,0 +1,152 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+
+public class RadixSort {
+
+	int base = 2;	
+
+	OneDigitListOfAllNumbers[] matrixToSort;
+	
+	public RadixSort() {
+		matrixToSort = new OneDigitListOfAllNumbers[base];
+		
+		for (int i=0; i<matrixToSort.length; i++) {
+			matrixToSort[i] = new OneDigitListOfAllNumbers();
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		RadixSort ms = new RadixSort();
+		int maxNValue = 30;
+
+//		int numbers[] = {11,16,4,7,2,10,12};;//,9,11,0,13,6,3,8,5};
+		int numbers[] = {11,10,12};//,9,11,0,13,6,3,8,5};
+
+//		int numbersInNewBase [][] = new int[numbers.length][ms.base];
+		NumberTwoBases numbersInNewBases[] = new NumberTwoBases[numbers.length];
+
+		
+		for (int i=0; i<numbers.length; i++) {
+			numbersInNewBases[i] = new NumberTwoBases (numbers[i], ms.base, maxNValue);
+		}				
+		
+		ms.sort(numbersInNewBase);
+		
+		ms.printSorted();
+		
+	}
+	
+	private void printSorted() {
+		for (int i=0; i < matrixToSort.length; i++) {
+			System.out.println("i=" + i);
+			matrixToSort[i].printNumbers();
+//			ms.printDigits(-1, numbersInNewBase[i]);
+		}
+		
+	}
+	
+	private void sort(NumberTwoBases[] numbers) {
+		int maxNDigits = numbers[0].maxNDigits;
+		for (int indexDigitPosition=0; indexDigitPosition<maxNDigits;indexDigitPosition++) {
+			for (int number=0; number<numbers.length; number++) {
+				
+				//Insere no local correto
+				int digitOfANumber = numbers[number].numberNewBase[indexDigitPosition];
+				matrixToSort[digitOfANumber].insert(numbers[number]);
+
+				if (indexDigitPosition>0) {
+					//Precisa remover o numero de onde ele estava
+					int lastDigitOfANumber = numbers[number].numberNewBase[indexDigitPosition-1];
+					matrixToSort[lastDigitOfANumber].removeLastOccurence(numbers[number]);					
+				}
+			
+			
+			}
+			
+		}
+	}
+
+	private void printDigits (int number, int[] digits) {
+		System.out.println("n=" + number);
+		for (int i=digits.length-1; i>=0; i--) {
+			System.out.print("" + digits[i]);
+		}
+		System.out.println("");		
+	}
+
+
+
+}
+
+class NumberTwoBases {
+	int number;
+	int base;
+
+	int maxNValue;
+	
+	//calcula previamente na construcao da classe
+	int maxNDigits;
+	
+	int numberNewBase[];
+	
+	public NumberTwoBases (int number, int base, int maxNValue) {
+		this.number = number;
+		this.base=base;
+		this.maxNValue = maxNValue;
+
+		//O numero maximo de bits sera log de MAX_VALUE na base k
+		this.maxNDigits = (int) (Math.log(this.maxNValue)/Math.log(base))+1;
+
+		this.numberNewBase = this.getDigitsInNewBase(number);
+	}
+	
+	/* Retorna um array de int. Cada elemento do array eh um digito na nova base.
+	 * Quanto menor o indice do array menos significativo eh o digito do numero.
+	 */
+	private int[] getDigitsInNewBase(int number) {
+		int[] digits = new int[this.maxNDigits];
+		for (int i=0; i<digits.length; i++) {
+			digits[i] = number%base;
+			number/=base;
+		}
+		return digits;
+	}
+	
+	private void printDigits (int[] digits) {
+		for (int i=digits.length-1; i>=0; i--) {
+			System.out.print("" + digits[i]);
+		}
+	}
+	
+		
+}
+
+class OneDigitListOfAllNumbers {
+	
+	public ArrayList<NumberTwoBases[]> list;
+	
+	public OneDigitListOfAllNumbers() {
+		this.list = new ArrayList<>();
+	}
+	
+	public void insert(NumberTwoBases[] n) {
+		this.list.add(n);
+	}
+	
+	public void removeLastOccurence (NumberTwoBases[] n) {
+		int index = list.lastIndexOf(n);
+		list.remove(index);
+	}
+	
+	public void printNumbers() {
+		Iterator<NumberTwoBases[]>  i = list.iterator();
+		while (i.hasNext()) {
+			this.printDigits(i.next());			
+			System.out.println("");
+		}
+	}
+		
+}

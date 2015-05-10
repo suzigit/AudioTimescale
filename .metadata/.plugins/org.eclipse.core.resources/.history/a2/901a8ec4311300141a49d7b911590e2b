@@ -1,0 +1,89 @@
+
+public class Heap {
+	
+	private int numbers[] = {1,4,7,10,3,7,7};
+	
+	public void createHeap() {
+		for (int i=numbers.length/2+1;i>=0;i--) {
+			heapfy(i,numbers.length-1);
+		}
+		
+	}
+	
+	private void heapfy(int index, int indexLastElement) {
+				
+		while (this.hasLeftChildren(index, indexLastElement)) { 
+			System.out.println ("heapfy index= " + index + " numbers = "+  this.toString());		
+			
+			if (this.hasLeftChildren(index, indexLastElement) && (numbers[index] < numbers[this.getIndexLeftChildren(index)])) {
+				this.changeValuePosition(index,this.getIndexLeftChildren(index));
+				index = this.getIndexLeftChildren(index);
+				System.out.println ("left index= " + index);		
+
+			}
+
+			else if (this.hasRightChildren(index, indexLastElement) && (numbers[index] < numbers[this.getIndexRightChildren(index)])) {
+					this.changeValuePosition(index,this.getIndexRightChildren(index));
+					index = this.getIndexRightChildren(index);
+					System.out.println ("right index= " + index);		
+			}
+			else {
+				index = this.numbers.length-1;
+			}
+		}
+	}
+	
+	private int getIndexLeftChildren(int index) {
+		return (2*index)+1;
+	}
+	
+	private int getIndexRightChildren(int index) {
+		return 2*index+2;
+	}
+	
+	private boolean hasLeftChildren(int index, int indexLastElement) {
+		int indexLeftChildren = this.getIndexLeftChildren(index);
+		return (indexLeftChildren < indexLastElement);
+	}
+	
+	private boolean hasRightChildren(int index, int indexLastElement) {
+		int indexRightChildren = this.getIndexRightChildren(index);
+		return (indexRightChildren < indexLastElement);
+	}
+	
+	private void changeValuePosition(int index1, int index2) {
+		int valueTemp = numbers[index1];
+		numbers[index1]=numbers[index2];
+		numbers[index2]=valueTemp;
+		System.out.println ("chnges index1= " + index1 + " com index 2=" + index2);		
+
+	}
+	
+	public void heapSort () {
+		this.createHeap();
+		System.out.println ("numbers heap criado = " + this.toString());		
+		int indexLastElement = numbers.length-1;
+		while (indexLastElement>0) {
+			this.changeValuePosition(0, indexLastElement);
+			indexLastElement--;
+			this.heapfy(0,indexLastElement);
+		}
+	}
+	
+	public String toString() {
+		String txtHeap = "";
+		for(int i=0; i<this.numbers.length; i++) {
+			txtHeap += this.numbers[i] + ", "; 
+		}
+		return txtHeap;
+	}
+	
+	public static void main (String[] args) {
+		Heap heap = new Heap();
+		System.out.println ("numbers original= " + heap.toString());
+		heap.heapSort();
+		System.out.println ("numbers final = " + heap.toString());		
+		
+	}
+
+}

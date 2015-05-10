@@ -1,0 +1,44 @@
+
+public class Heap {
+	
+	private int numbers[] = {1,4,7,10,3,7,7};
+	
+	public void createHeap() {
+		for (int i=0;i<numbers.length/2+1;i++) {
+			heapfy(i);
+		}
+		
+	}
+	
+	private void heapfy(int index) {
+				
+		while (index<numbers.length) { //???
+			if (this.hasLeftChildren(index)) {
+				if (numbers[index] > numbers[this.getIndexLeftChildren(index)]) {
+					this.changePosition(index,this.getIndexLeftChildren(index));
+				}
+			}
+		}
+	}
+	
+	private int getIndexLeftChildren(int index) {
+		return 2*index;
+	}
+	
+	private int getIndexRightChildren(int index) {
+		return 2*index+1;
+	}
+	
+	private boolean hasLeftChildren(int index) {
+		int indexLeftChildren = this.getIndexLeftChildren(index);
+		return (indexLeftChildren < numbers.length);
+	}
+	
+	private boolean hasRightChildren(int index) {
+		int indexRightChildren = this.getIndexRightChildren(index);
+		return (indexRightChildren < numbers.length);
+	}
+	
+	
+
+}

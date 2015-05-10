@@ -1,0 +1,126 @@
+public class FindSubstring {
+
+	public static void main(String[] args) {
+		String s = "dfk";
+		String txt = "dfk";
+		
+		FindSubstring fs = new FindSubstring();
+		
+		System.out.println("indice=" + fs.findSubstring(s, txt));
+		
+	}
+
+	/*
+	 * Retorna o indice de inicio da substring no texto ou -1. 
+	 * Supondo txt ter tamanho maior ou igual do que s.
+	 */
+	public int findSubstring (String s, String txt) {
+		FindSubstring.RollingHash rs = new RollingHash(s);
+		RollingHash rSubtxt = new RollingHash(txt.substring(0,s.length()));
+		int result=-1;
+		boolean findResult = false; 
+		
+		for (int i=0; !findResult && i < (txt.length()-s.length()+1); i++) {
+			int sHash = rs.getRollingHash();	
+			int subTxtHash = rSubtxt.getRollingHash();
+			if (sHash==subTxtHash && rs.getTxt().equals(rSubtxt.getTxt())) {
+				result=i;
+				findResult = true;					
+			}
+			else {
+				rSubtxt.pop();
+				//busca prox char no texto, se existir
+				if (txt.length()>s.length()+i) {
+					char c = txt.charAt((s.length()+i));
+					rSubtxt.append(c);
+				}
+			}
+		}
+		return result;
+	}
+			
+	class RollingHash {
+
+		private CircularList txt;
+		private int hashValue;
+		final int modNumber = 100;
+		
+		public RollingHash(String txt) {
+			this.txt= new CircularList(txt);
+			this.calculateHash();
+		}
+		
+		private void calculateHash() {			
+			int totalValue = 0;
+			for (int i=0; i<this.txt.length; i++) {
+				char iChar = this.txt.charAt(i);
+				totalValue += iChar;
+			}
+			this.hashValue = totalValue % modNumber;
+			System.out.println("txt=" + txt + " total=" + totalValue + " hash=" + hashValue);
+		}
+
+
+		public void append(char c) {
+			this.txt+=c;
+			this.hashValue = (this.hashValue+c)%modNumber;
+		}
+		
+		public void pop(){
+			char c = this.txt.charAt(0);
+			this.txt = this.txt.substring(1);
+			this.hashValue = (this.hashValue-c)%modNumber;
+		}
+		
+		public int getRollingHash() {
+			return hashValue;
+		}
+		public String getTxt() {
+			return this.txt;
+		}
+	}	
+		
+}
+
+
+class CircularList {
+	
+	Node initialNode;
+	int lenght=0;
+	
+	//supondo txt com pelo menos 1 elemento
+	public CircularList(String txt) {
+		
+		//cria primeiro elemento
+		this.initialNode = new Node (txt.charAt(0));
+		this.initialNode.nextNode = this.initialNode;
+		this.initialNode.previousNode = this.initialNode;
+		this.lenght=1;
+		
+		//cria elementos seguintes
+		Node previousNode = this.initialNode;		
+		for (int i=0; i<txt.length(); i++) {
+			char c = txt.charAt(i);
+			Node node = new Node (c);
+			previousNode.nextNode = node;
+			node.previousNode = previousNode;
+			node.nextNode = this.initialNode;			
+			this.lenght++;
+		}
+	}
+	
+	
+	class Node {		
+		
+		char c;
+		Node nextNode;
+		Node previousNode;
+		
+		protected Node (char c) {
+			this.c = c;
+			this.nextNode = null;
+			this.previousNode = null;
+		}
+		
+	}
+}

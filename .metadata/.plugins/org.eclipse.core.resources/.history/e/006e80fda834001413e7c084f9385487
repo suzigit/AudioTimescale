@@ -1,0 +1,55 @@
+package newtonmethod;
+
+class NumberTwoBases {
+	long number;
+	int base;
+
+	long maxNValue;
+	
+	//calcula previamente na construcao da classe
+	int maxNDigits;
+	
+	int numberNewBase[];
+	
+	public NumberTwoBases (long number, int base) {
+		this.number = number;
+		this.base=base;
+		this.maxNValue = maxNValue;
+
+		//O numero maximo de bits sera log de MAX_VALUE na base k
+		this.maxNDigits = (int) (Math.log(this.maxNValue)/Math.log(base))+1;
+
+		this.numberNewBase = this.getDigitsInNewBase(number);
+	}
+	
+	/* Retorna um array de int. Cada elemento do array eh um digito na nova base.
+	 * Quanto menor o indice do array menos significativo eh o digito do numero.
+	 */
+	private int[] getDigitsInNewBase(long number) {
+		int[] digits = new int[this.maxNDigits];
+		for (int i=0; i<digits.length; i++) {
+			digits[i] = (int) number%base;
+			number/=base;
+		}
+		return digits;
+	}
+	
+	public void printDigitsNewBase () {
+		System.out.print("Number=" + this.number +  " - Digits=");
+		for (int i=numberNewBase.length-1; i>=0; i--) {
+			System.out.print("" + numberNewBase[i]);
+		}
+	}
+	
+	public void print () {
+		System.out.print("Number=" + this.number +  " - Digits=");
+		for (int i=numberNewBase.length-1; i>=0; i--) {
+			System.out.print("" + numberNewBase[i] + "-");
+		}
+		System.out.println("");
+	}
+	
+	public String toString () {
+		return this.number+"";
+	}
+}

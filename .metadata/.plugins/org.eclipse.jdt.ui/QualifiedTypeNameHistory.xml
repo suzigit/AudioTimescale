@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="CountingSort"/>
+<fullyQualifiedTypeName name="OneListCoutingSort"/>
+<fullyQualifiedTypeName name="javax.naming.BinaryRefAddr"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.awt.RenderingHints.Key"/>
+<fullyQualifiedTypeName name="hashing.NodeListOfHashTable"/>
+<fullyQualifiedTypeName name="hashing.MyHashtable"/>
+<fullyQualifiedTypeName name="hashing.MyTableDoubligHashtable"/>
+<fullyQualifiedTypeName name="hashing.ArrayTableDoublingwithChaining"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="TestInnerClass.Inner"/>
+<fullyQualifiedTypeName name="TestInnerClass"/>
+<fullyQualifiedTypeName name="TestComparable"/>
+<fullyQualifiedTypeName name="graph.Graph"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="java.util.Enumeration"/>
+</qualifiedTypeNameHistroy>

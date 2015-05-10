@@ -1,0 +1,51 @@
+//import javax.swing.*;
+import java.io.*;
+import java.util.*;
+
+public class CompareDocuments {
+
+	
+	public static void main(String[] args) {
+		CompareDocuments cd = new CompareDocuments();
+		HashMap<String, Integer>  wordsCounts1 = cd.readFile("file1.txt");
+		HashMap<String, Integer>  wordsCounts2 = cd.readFile("file2.txt");
+
+	}
+	
+	private HashMap<String, Integer> readFile (String fileName) {
+		HashMap<String, Integer>  wordsCounts = new HashMap<>();
+	    Collection<String> wordsPerLine = new LinkedList<>();
+		
+	    try{
+	        //abrindo arquivo para leitura
+	        FileReader reader = new FileReader(fileName);
+	        //leitor do arquivo
+	        BufferedReader buffer = new BufferedReader(reader);
+        	String line="";
+	        while(line!=null){
+	        	line=buffer.readLine();
+		        wordsPerLine = extractWords(line);
+		        for (w: wordsPerline) {
+		        	if (wordsCounts.keySet().contains(w)) {
+		        		//adiciona um valor
+		        		wordsCounts.get(w).;	
+		        	}
+		        	else {
+		        		//adiciona a palavra com 1 ocorrência
+		        		wordsCounts.put(w, 1);
+		        	}
+		        }
+	        }
+	        
+	      }
+	      catch(IOException e) {
+	    	  System.out.println("Erro na leitura do arquivo e extração de palavras" + e.toString());
+	      }
+	    
+	    return wordsCounts;
+		
+	} 
+
+
+
+}

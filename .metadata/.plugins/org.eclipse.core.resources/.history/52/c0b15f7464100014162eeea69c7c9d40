@@ -1,0 +1,69 @@
+//import javax.swing.*;
+import java.io.*;
+import java.util.*;
+
+public class CompareDocuments {
+
+	
+	public static void main(String[] args) {
+		CompareDocuments cd = new CompareDocuments();
+		HashMap<String, Integer>  wordsCounts1 = cd.readFile("file1.txt");
+		HashMap<String, Integer>  wordsCounts2 = cd.readFile("file2.txt");
+		double d = cd.distance(wordsCounts1, wordsCounts2);
+		System.out.println("distancia = " + d); 
+	}
+	
+	private HashMap<String, Integer> readFile (String fileName) {
+		HashMap<String, Integer>  wordsCounts = new HashMap<>();
+	    String[] wordsPerLine = null;
+		
+	    try{
+	        //abrindo arquivo para leitura
+	        FileReader reader = new FileReader(fileName);
+	        //leitor do arquivo
+	        BufferedReader buffer = new BufferedReader(reader);
+        	String line="";
+	        while(line!=null){
+	        	line=buffer.readLine();
+		        wordsPerLine = extractWords(line);
+		        for (String w : wordsPerLine) {
+		        	if (wordsCounts.keySet().contains(w)) {
+		        		//adiciona um valor -- deve dar para fazer melhor!
+		        		Integer i = wordsCounts.get(w);
+		        		i = new Integer((i.intValue()+1));
+		        		wordsCounts.remove(w);
+		        		wordsCounts.put(w, i);
+		        	}
+		        	else {
+		        		//adiciona a palavra com 1 ocorrência
+		        		wordsCounts.put(w, 1);
+		        	}
+		        }
+	        }
+	        
+	      }
+	      catch(IOException e) {
+	    	  System.out.println("Erro na leitura do arquivo e extração de palavras" + e.toString());
+	      }
+	    
+	    return wordsCounts;
+		
+	} 
+	
+	
+	private String[] extractWords(String text) {
+	    String[] words = text.split(" ");
+	    return words;
+	}
+
+	private double distance(HashMap<String, Integer> d1, HashMap<String, Integer> d2) {
+		double d=0;
+		Set <String> setKeys = d1.keySet();
+		for (String s: setKeys) {
+			Integer i2 = d2.get(s);
+			if (d2)
+		}
+	}
+
+
+}
